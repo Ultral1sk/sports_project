@@ -5,7 +5,7 @@ import mcitylogo from '../../Resources/images/logos/manchester_city_logo.png'
 
 
 // creating a reusable component
-export const CityLogo = (props) => {
+const CityLogo = (props) => {
 
     const template = <div 
                         className="img_cover"
@@ -30,3 +30,5 @@ export const CityLogo = (props) => {
         return template
     }
 }
+
+export default CityLogo

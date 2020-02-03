@@ -5,7 +5,7 @@ import Button   from '@material-ui/core/Button';
 
 import { Link } from 'react-router-dom';
 
-import { CityLogo } from '../ReusableUI/Icons'
+import CityLogo  from '../ReusableUI/Icons'
 
 const AppBarStyling = {
 
