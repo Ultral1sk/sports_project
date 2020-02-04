@@ -68,7 +68,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 
-1 - installing packages
-2 - routes file
-3 - creating layout file
-4 - starting with the project adding the header
+1   - installing packages
+2   - routes file where the routing will be done
+3   - creating layout file where the items are going to be displayed
+4   - starting with the project adding the header
+5   - creating a reusable component in this case the logo
+5.5 - creating the footer

@@ -162,6 +162,8 @@ footer .footer_discl {
 ===============================*/
 
 .featured_wrapper {
+
+    align-items: center;
     margin: 0 auto;
     width: 1280px;
     margin-top: 90px;

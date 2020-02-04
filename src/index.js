@@ -5,6 +5,8 @@ import './Resources/css/app.css'
 import { BrowserRouter } from 'react-router-dom'
 import Routes from './routes';
 
+import './firebase';
+
 //creating a function which is goingto manage the routes
 const App = () => {
     return(
