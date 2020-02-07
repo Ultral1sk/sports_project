@@ -38,3 +38,30 @@ const MiscellaneousTag = (props) => {
 }
 
 export default MiscellaneousTag
+
+
+// because our data is in an object and we can not display it we need to put it into array
+// that is why we use this helper function so we can render it and then we immport it into
+// blocks which will render the matches from the database.
+export const firebaseLooper = ( snapshot ) => {
+    let data = [];
+    snapshot.forEach(( childSnapshot ) => {
+        data.push({
+            ...childSnapshot.val(),
+            id : childSnapshot.key
+        })
+    });
+    return data
+
+}
+
+//creating a helper function to reverse the array
+
+export const reverseArray = (actualArray) => {
+    let reversedArray = [];
+    
+    for(let i = actualArray.length - 1; i>= 0; i--){
+        reversedArray.push(actualArray[i])
+    }
+    return reversedArray
+}

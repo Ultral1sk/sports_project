@@ -16,8 +16,12 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  const firebaseDB = firebase.database();
-  firebaseDB.ref('matches').once('value').then((snapshot) => {
-      console.log(snapshot.val());
-      
-  })
+const firebaseDB = firebase.database();
+//we acces our database and we use the ref() method to reffer to the database matches folder
+// and then we export what we get whenever we are gonna need it
+const firebaseMatches = firebaseDB.ref('matches')
+
+  export {
+      firebase,
+      firebaseMatches
+  }

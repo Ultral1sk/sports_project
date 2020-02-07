@@ -1,6 +1,6 @@
 import React from 'react'
 import MiscellaneousTag from '../../ReusableUI/miscellaneous'
-
+import Blocks from './Blocks';
 
 const MatchesHome = () => {
     return (
@@ -14,7 +14,7 @@ const MatchesHome = () => {
                 >
                 Matches
                 </MiscellaneousTag>
-                BLOCK
+                <Blocks />
 
                 <MiscellaneousTag
                    bck="#ffffff"
