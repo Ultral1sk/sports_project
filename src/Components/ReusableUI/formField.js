@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FormFields = ({ formdata, id, change }) => {
+const FormField = ({ formdata, id, change }) => {
 
 
     // function that renders the erorors of the state we are getting
@@ -52,4 +52,4 @@ const FormFields = ({ formdata, id, change }) => {
     )
 }
 
-export default FormFields  
+export default FormField  
