@@ -65,3 +65,37 @@ export const reverseArray = (actualArray) => {
     }
     return reversedArray
 }
+
+//function that is going to validate the form
+// and also update the state  this.state.valid and this.state.validationMessage
+export const validate = (element) => {
+    let error = [true, ''];
+
+    // email validation
+    if(element.validation.email) {
+        const valid = /\S+@\S+\.\S/.test(element.value);
+        const message = `${!valid ? 'this requires a valid email' : ''}`
+        error = !valid ? [valid, message] : error
+
+    }
+
+
+
+
+    // by default validation in the state is false 
+    // this function is called into where the state is being updated that is how we have acces
+    // to the state through this function also and this function will check if the 
+    // if in the updated state the validation is TRUE or false
+    if(element.validation.required){
+        // this will check if the validation is empty or if it has a value will return true or if id doesn't have a value it'll return false
+        const valid = element.value.trim() !== '';
+        // if valid is not true itll say this field is required if it is true we can start an empty string into an Array
+        const message = `${!valid ? 'this field is required' : ''}`
+        // if valid is not true we return an error if it is we return 
+        //true in the valid we say that the input does have a value meaning valid will be true
+        // and the message variable will return true also meaning itll allow  us to store the value into an empty string into an ARRAY
+        error = !valid ? [valid, message] : error
+    }
+
+    return error
+}

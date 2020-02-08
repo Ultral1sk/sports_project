@@ -33,7 +33,7 @@ class Blocks extends Component {
                     <div className="item">
                         <div className="wrapper">
                             <MatchesBlock match={match} />
-                            {console.log(match)}
+                    
                         </div>
                     </div>
                 </Slide>
@@ -48,7 +48,7 @@ class Blocks extends Component {
 
     render() {
 
-        console.log(this.state)
+       
         return (
             <div className="home_matches">
                 {this.showMatches(this.state.matches)}
