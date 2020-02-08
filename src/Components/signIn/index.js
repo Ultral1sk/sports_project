@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FormField from '../ReusableUI/formField'
 import { validate } from '../ReusableUI/miscellaneous'
-
+import { firebase } from '../../firebase'
 
 class SignIn extends Component {
 
@@ -91,7 +91,23 @@ class SignIn extends Component {
         }
 
         if (formIsValid) {
-            console.log(dataToSubmit)
+   
+            //firebase special method
+            firebase.auth()
+            // firebase method that  gets the email and password fomr the state
+            .signInWithEmailAndPassword(
+                dataToSubmit.email,
+                dataToSubmit.password
+            ).then(() => {
+                // console.log(`user is aut`);
+                    this.props.history.push('/dashboard')
+            }).catch((err) => {
+                this.setState({
+                    formError : true
+                })
+                // console.log(this.state.formError);
+                
+            })
 
         } else {
             this.setState({
