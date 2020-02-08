@@ -40,9 +40,10 @@ const MiscellaneousTag = (props) => {
 export default MiscellaneousTag
 
 
-// because our data is in an object and we can not display it we need to put it into array
-// that is why we use this helper function so we can render it and then we immport it into
-// blocks which will render the matches from the database.
+// because our data is in an object and we can not display it we need to put it into array/
+// also we are taking the key of each match and storing it inside the object 
+// this puts the datakey into the whole match object and that same object is inside an array and has 
+// a new index key from the array
 export const firebaseLooper = ( snapshot ) => {
     let data = [];
     snapshot.forEach(( childSnapshot ) => {
@@ -56,7 +57,6 @@ export const firebaseLooper = ( snapshot ) => {
 }
 
 //creating a helper function to reverse the array
-
 export const reverseArray = (actualArray) => {
     let reversedArray = [];
     

@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { firebaseMatches } from '../../../firebase';
-import { firebaseLooper, reverseArray } from '../../ReusableUI/miscellaneous'
+import { firebaseLooper, reverseArray } from '../../ReusableUI/miscellaneous';
 
-import MatchesBlock from '../../ReusableUI/matches_block'
+import MatchesBlock from '../../ReusableUI/matches_block';
+
+import Slide from 'react-reveal';
 
 class Blocks extends Component {
 
@@ -24,21 +26,28 @@ class Blocks extends Component {
 
     showMatches = (matches) => (
         //if  we have matches return this if not return null
+
         matches ?
             matches.map((match) => (
-                <div className="item">
-                    <div className="wrapper">
-                        <MatchesBlock match={match} />
+                <Slide bottom key={match.id}>
+                    <div className="item">
+                        <div className="wrapper">
+                            <MatchesBlock match={match} />
+                            {console.log(match)}
+                        </div>
                     </div>
-                </div>
+                </Slide>
+
             ))
             : null
+
 
     )
 
 
 
     render() {
+
         console.log(this.state)
         return (
             <div className="home_matches">
