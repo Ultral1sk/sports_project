@@ -3,6 +3,7 @@ import Fade from 'react-reveal/Fade';
 import FormFields from '../../ReusableUI/formFields'
 import { validate } from '../../ReusableUI/miscellaneous'
 
+import {firebasePromotions} from '../../../firebase';
 
 class Enroll extends Component {
 
@@ -64,7 +65,7 @@ class Enroll extends Component {
     }
 
 
-    resetFormSuccess = () => {
+    resetFormSuccess = (type) => {
         const newFormdata = {...this.state.formdata}
 
         for(let key in newFormdata) {
@@ -76,7 +77,7 @@ class Enroll extends Component {
         this.setState({
             formError : false,
             formdata : newFormdata,
-            formSuccess : 'Congratulations'
+            formSuccess : type ? 'Congratulations' : 'Ops Email already used'
         });
 
         this.successMessage();
@@ -106,8 +107,24 @@ class Enroll extends Component {
         }
 
         if(formIsValid){
-            console.log(dataToSubmit)
-            this.resetFormSuccess()
+          // the first request will check if the user is already is the database
+          // https://firebase.google.com/docs/reference/js/firebase.database.Reference.html#orderbychild
+            firebasePromotions.orderByChild('email').equalTo(dataToSubmit.email).once('value')
+            .then((snapshot) => {
+                if(snapshot.val() === null){
+                    //pushing the data to database if we have a new user
+                    firebasePromotions.push(dataToSubmit)
+                    this.resetFormSuccess(true)
+
+                } else {
+                    // if email is being taken
+                    this.resetFormSuccess(false)
+                    // console.log(snapshot.val());
+                }
+           
+                
+            })
+           
         } else {
             this.setState({    
                 formError : true

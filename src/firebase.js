@@ -19,9 +19,12 @@
 const firebaseDB = firebase.database();
 //we acces our database and we use the ref() method to reffer to the database matches folder
 // and then we export what we get whenever we are gonna need it
-const firebaseMatches = firebaseDB.ref('matches')
+const firebaseMatches = firebaseDB.ref('matches');
+//accesing the promotions folder into the databbase
+const firebasePromotions  = firebaseDB.ref('promotions');
 
   export {
       firebase,
-      firebaseMatches
+      firebaseMatches,
+      firebasePromotions
   }
