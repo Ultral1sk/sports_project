@@ -2,11 +2,14 @@ import React from 'react'
 
 const FormFields = ({ formdata, id, change }) => {
 
+
+    // function that renders the erorors of the state we are getting
     const showError = () => {
         let errorMessage = <div className="error_label">
                 {
                     // if  validation is true and  the formdata is valid
-                    formdata.validation && !formdata.valid ?
+                    formdata.validation && !formdata.valid 
+                    ?
                         formdata.validationMessage
                     : null
 
@@ -14,7 +17,7 @@ const FormFields = ({ formdata, id, change }) => {
         </div>
 
 
-return errorMessage
+                return errorMessage
     }
 
 
