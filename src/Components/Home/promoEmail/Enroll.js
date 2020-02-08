@@ -55,15 +55,65 @@ class Enroll extends Component {
         // we are updating the new element with the new state
         newFormdata[element.id] = newElement
 
-        console.log(newFormdata);
+  
 
         this.setState({
+            formError : false,
             formdata : newFormdata
         })
     }
 
-    submitForm = () => {
 
+    resetFormSuccess = () => {
+        const newFormdata = {...this.state.formdata}
+
+        for(let key in newFormdata) {
+            newFormdata[key].value = ''
+            newFormdata[key].valid = false;
+            newFormdata[key].validationMessage = '';
+
+        }
+        this.setState({
+            formError : false,
+            formdata : newFormdata,
+            formSuccess : 'Congratulations'
+        });
+
+        this.successMessage();
+
+    }
+
+    successMessage = () => {
+        setTimeout(() => {
+            this.setState({
+                formSuccess : ''
+            })
+        }, 2000)
+    }
+
+
+    submitForm = (event) => {
+        event.preventDefault();
+
+        //we are going to submit an object with keys and values
+        let dataToSubmit = {};
+        let formIsValid  = true;
+        // we are gogin to go trought the state and check if they are valid or true or something
+
+        for( let key in this.state.formdata) {
+            dataToSubmit[key] = this.state.formdata[key].value;
+            formIsValid = this.state.formdata[key].valid && formIsValid;
+        }
+
+        if(formIsValid){
+            console.log(dataToSubmit)
+            this.resetFormSuccess()
+        } else {
+            this.setState({    
+                formError : true
+            })
+        }
+        
     }
 
     render() {
@@ -82,6 +132,15 @@ class Enroll extends Component {
 
 
                             />
+                            {this.state.formError 
+                            ? 
+                            <div className="error_label">Something is wrong try again</div>
+                            :
+                            null
+                            }
+
+                            <div className="success_label">{this.state.formSuccess}</div>
+                            <button onClick={(event) => this.submitForm(event)}>Enroll</button>
                         </div>
                     </form>
                 </div>

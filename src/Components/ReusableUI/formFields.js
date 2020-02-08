@@ -7,7 +7,7 @@ const FormFields = ({ formdata, id, change }) => {
     const showError = () => {
         let errorMessage = <div className="error_label">
                 {
-                    // if  validation is true and  the formdata is valid
+                    // if  validation is true and the formdata is valid
                     formdata.validation && !formdata.valid 
                     ?
                         formdata.validationMessage
