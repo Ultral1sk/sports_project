@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade';
-import FormFields from '../../ReusableUI/formFields'
+import FormField from '../../ReusableUI/formField'
 import { validate } from '../../ReusableUI/miscellaneous'
 
 import { firebasePromotions } from '../../../firebase';
@@ -142,7 +142,7 @@ class Enroll extends Component {
                             Enter your email
                         </div>
                         <div className="enroll_input">
-                            <FormFields
+                            <FormField
                                 id={'email'}
                                 formdata={this.state.formdata.email}
                                 change={(element) => this.updateForm(element)}

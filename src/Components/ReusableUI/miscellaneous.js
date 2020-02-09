@@ -79,9 +79,6 @@ export const validate = (element) => {
 
     }
 
-
-
-
     // by default validation in the state is false 
     // this function is called into where the state is being updated that is how we have acces
     // to the state through this function also and this function will check if the 
