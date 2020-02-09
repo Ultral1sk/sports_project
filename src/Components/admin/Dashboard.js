@@ -1,10 +1,18 @@
 import React from 'react'
+import AdminLayout from '../../HOC/AdminLayout'
+
 
 const Dashboard = () => {
     return (
-        <div className="user_dashboard">
-            
-        </div>
+
+        <AdminLayout>
+            <div className="user_dashboard">
+                <div>
+                    This is osmetig
+
+                </div>
+            </div>
+        </AdminLayout>
     )
 }
 
