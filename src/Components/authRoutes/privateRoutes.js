@@ -1,6 +1,8 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 
+
+// These are the routes when an admin logs in into our application
 const PrivateRoutes = ({ 
 
     user,
