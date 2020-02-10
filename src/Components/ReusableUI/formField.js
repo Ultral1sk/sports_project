@@ -1,4 +1,5 @@
 import React from 'react'
+import { formatMs } from '@material-ui/core/styles/transitions'
 
 const FormField = ({ formdata, id, change }) => {
 
@@ -28,6 +29,13 @@ const FormField = ({ formdata, id, change }) => {
             case('input') : 
                 formTemplate = (
                     <div>
+                        { formdata.showlabel ? 
+                            <div className="label_inputs">
+                                {formdata.config.label}
+                            </div>
+                            : ''
+                        
+                        }
                         <input 
                             {...formdata.config}
                             value={formdata.value}
@@ -36,6 +44,32 @@ const FormField = ({ formdata, id, change }) => {
                         {showError()}
                     </div>
                 )
+            break;
+            case('select') :
+                    formTemplate = (
+                        <div>
+                            { formdata.showlabel ? 
+                                <div className="label_inputs">
+                                    {formdata.config.label}
+                                </div>
+                                :null
+                            }
+                            <select 
+                                value={formdata.value}
+                                onChange={(event) => change({event, id})}
+                            >
+                                <option value="">select One</option>
+                                {
+                                    formdata.config.options.map((item) => (
+                                        <option key={item.key} value={item.key}>
+                                                {item.value}
+                                        </option>
+                                    ))
+                                }
+                            </select>
+                            { showError()}
+                        </div>
+                    )
             break;
             // if theere isnt any case we return null if true well treturn the form
             default:
