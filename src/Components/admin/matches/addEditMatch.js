@@ -226,7 +226,7 @@ class AddEditMatch extends Component {
 
 
         if(!matchId){
-           
+           getTeams(false, 'Add Match')
         } else {
             firebaseDB.ref(`matches/${matchId}`).once('value')
             .then((snapshot)=>{
@@ -235,6 +235,75 @@ class AddEditMatch extends Component {
             })
         }
     }
+
+    successForm = ( nessage ) => {
+        this.setState({
+            formSuccess : nessage
+        });
+
+        setTimeout(() => {
+            this.setState({
+                formSuccess : ''
+            });
+        }, 2000)
+    }
+
+    submitForm = (event) => {
+        event.preventDefault();
+
+        //we are going to submit an object with keys and values
+        let dataToSubmit = {};
+        let formIsValid = true;
+        // we are gogin to go trought the state and check if they are valid or true or something
+
+        for (let key in this.state.formdata) {
+            dataToSubmit[key] = this.state.formdata[key].value;
+            formIsValid = this.state.formdata[key].valid && formIsValid;
+        }
+
+        this.state.teams.forEach(team => {
+            if( team.shortName === dataToSubmit.local ){
+                dataToSubmit['localThmb'] = team.thmb
+            }
+            if( team.shortName === dataToSubmit.away ){
+                dataToSubmit['awayThmb'] = team.thmb
+            }
+        })
+
+        if (formIsValid) {
+            // console.log(dataToSubmit);
+            if(this.state.formType === 'Edit Match'){
+                firebaseDB.ref(`matches/${this.state.matchId}`)
+                .update(dataToSubmit).then(() => {
+                    this.successForm('Updated Correctly');
+                })
+                .catch((err) => {
+                    this.setState({ formError: true })
+                }) 
+
+            } else {
+
+                firebaseMatches.push(dataToSubmit).then(() =>{
+                    this.props.history.push('/admin_matches');
+                })
+                .catch((err) => {
+                    this.setState({ formError : true})
+                })
+            }
+
+            } else {
+                this.setState({
+                    formError: true
+                })
+            }
+
+    }
+
+
+
+    
+
+
     render() {
         return (
             <AdminLayout>
