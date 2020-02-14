@@ -7,13 +7,22 @@ import PublicRoute from './Components/authRoutes/publicRoutes'
 
 import Home from './Components/Home/index'
 import SignIn from './Components/signIn/'
+
 import Dashboard from './Components/admin/Dashboard'
+import AdminMatches from './Components/admin/matches'
+import AddEditMatch from './Components/admin/matches/addEditMatch'
+import AddMatch from './Components/admin/matches/addEditMatch'
+import AdminPlayers from './Components/admin/players/index'
 // this is in this case the App component
 const Routes = (props) => {
     return (
         <div>
             <Layout>
                 <Switch>
+                    <PrivateRoute {...props} path="/admin_players/" exact component={AdminPlayers} />
+                    <PrivateRoute {...props} path="/admin_matches/edit_match/" exact component={AddMatch} />
+                    <PrivateRoute {...props} path="/admin_matches/edit_match/:id" exact component={AddEditMatch} />
+                    <PrivateRoute {...props} path="/admin_matches" exact component={AdminMatches} />
                     <PrivateRoute {...props} path="/dashboard" exact component={Dashboard} />
                     <PublicRoute  {...props} restricted={true} path='/sign_in' exact component={SignIn} />
                     {/*  if the user is signed in they will not be able to acces the sign_in component they will be redirected directly to the dashboard    */}

@@ -1,6 +1,9 @@
   import firebase from 'firebase/app';
   import 'firebase/database'
   import 'firebase/auth'
+
+
+
   
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -21,9 +24,16 @@ const firebaseDB = firebase.database();
 const firebaseMatches = firebaseDB.ref('matches');
 //accesing the promotions folder into the databbase
 const firebasePromotions  = firebaseDB.ref('promotions');
+//accesing the promotions teams into the databbase
+const firebaseTeams = firebaseDB.ref('teams');
+// accesing the players inbto database
+const firebasePlayers = firebaseDB.ref('players')
 
   export {
-      firebase,
-      firebaseMatches,
-      firebasePromotions
+    firebase,
+    firebaseMatches,
+    firebasePromotions,
+    firebaseTeams,
+    firebasePlayers,
+    firebaseDB
   }

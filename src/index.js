@@ -11,7 +11,7 @@ import { firebase } from './firebase'
 //creating a function which is goingto manage the routes
 // getting the props from firebase
 const App = (props) => {
-    console.log(props);
+    // console.log(props);
     
     return(
         <BrowserRouter>
