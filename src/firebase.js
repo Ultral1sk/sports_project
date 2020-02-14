@@ -26,11 +26,14 @@ const firebaseMatches = firebaseDB.ref('matches');
 const firebasePromotions  = firebaseDB.ref('promotions');
 //accesing the promotions teams into the databbase
 const firebaseTeams = firebaseDB.ref('teams');
+// accesing the players inbto database
+const firebasePlayers = firebaseDB.ref('players')
 
   export {
     firebase,
     firebaseMatches,
     firebasePromotions,
     firebaseTeams,
+    firebasePlayers,
     firebaseDB
   }
