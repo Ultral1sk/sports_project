@@ -24,9 +24,13 @@ const firebaseDB = firebase.database();
 const firebaseMatches = firebaseDB.ref('matches');
 //accesing the promotions folder into the databbase
 const firebasePromotions  = firebaseDB.ref('promotions');
+//accesing the promotions teams into the databbase
+const firebaseTeams = firebaseDB.ref('teams');
 
   export {
-      firebase,
-      firebaseMatches,
-      firebasePromotions
+    firebase,
+    firebaseMatches,
+    firebasePromotions,
+    firebaseTeams,
+    firebaseDB
   }

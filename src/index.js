@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './Resources/css/app.css'
 
-
-
 import { BrowserRouter } from 'react-router-dom'
 import Routes from './routes';
 import { firebase } from './firebase'
@@ -13,7 +11,7 @@ import { firebase } from './firebase'
 //creating a function which is goingto manage the routes
 // getting the props from firebase
 const App = (props) => {
-    console.log(props);
+    // console.log(props);
     
     return(
         <BrowserRouter>
