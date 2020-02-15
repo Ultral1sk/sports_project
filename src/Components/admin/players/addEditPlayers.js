@@ -5,7 +5,7 @@ import AdminLayout from '../../../HOC/AdminLayout'
 import FormField from '../../ReusableUI/formField'
 import { validate } from '../../ReusableUI/miscellaneous'
 
-import FileUploader from '../../ReusableUI/fileuploader'
+import Fileuploader from '../../ReusableUI/fileuploader'
 
 import { firebasePlayers, firebaseDB, firebase } from '../../../firebase';
 import { firebaseLooper } from '../../ReusableUI/miscellaneous'
@@ -38,65 +38,64 @@ class AddEditPlayers extends Component {
                     validationMessage: '',
                     showlabel: true
                 },
-                lastname: {
-                    element: 'input',
-                    value: '',
-                    config: {
-                        label: 'Player Last Name',
-                        name: 'lastname_input',
+                lastname:{
+                    element:'input',
+                    value:'',
+                    config:{
+                        label: 'Player Last name',
+                        name:'lastname_input',
                         type: 'text'
                     },
-                    validation: {
+                    validation:{
                         required: true
                     },
                     valid: false,
-                    validationMessage: '',
+                    validationMessage:'',
                     showlabel: true
                 },
-                number: {
-                    element: 'input',
-                    value: '',
-                    config: {
+                number:{
+                    element:'input',
+                    value:'',
+                    config:{
                         label: 'Player number',
-                        name: 'number_input',
+                        name:'number_input',
                         type: 'text'
                     },
-                    validation: {
+                    validation:{
                         required: true
                     },
                     valid: false,
-                    validationMessage: '',
+                    validationMessage:'',
                     showlabel: true
                 },
-                position: {
-                    element: 'select',
-                    value: '',
-                    config: {
+                position:{
+                    element:'select',
+                    value:'',
+                    config:{
                         label: 'Select a position',
-                        name: 'select_position',
-                        type: 'select ',
+                        name:'select_position',
+                        type: 'select',
                         options: [
-                            { key: 'Keeper', value: 'Keeper' },
-                            { key: 'Defence', value: 'Defence' },
-                            { key: 'Midfielder', value: 'Midfielder' },
-                            { key: 'Striker', value: 'Striker' },
-
+                            {key:"Keeper",value:"Keeper"},
+                            {key:"Defence",value:"Defence"},
+                            {key:"Midfield",value:"Midfield"},
+                            {key:"Striker",value:"Striker"}
                         ]
                     },
-                    validation: {
+                    validation:{
                         required: true
                     },
                     valid: false,
-                    validationMessage: '',
+                    validationMessage:'',
                     showlabel: true
                 },
-                image : {
-                    element : 'image',
-                    value : '',
-                    validation : {
+                image:{
+                    element:'image',
+                    value:'',
+                    validation:{
                         required: true
                     },
-                    valid: true
+                    valid:false
                 }
             }
         }
@@ -115,11 +114,20 @@ class AddEditPlayers extends Component {
         }
     }
 
-    updateForm(element) {
+    updateForm(element, content = '') {
+
+        
         const newFormdata = { ...this.state.formdata }
         const newElement = { ...newFormdata[element.id] }
 
-        newElement.value = element.event.target.value;
+        if(content === '') {
+            newElement.value = element.event.target.value;
+
+        } else  {
+            newElement.value = content
+        }
+
+        
 
         let validData = validate(newElement)
         newElement.valid = validData[0];
@@ -149,7 +157,19 @@ class AddEditPlayers extends Component {
 
         if (formIsValid) {
             // console.log(dataToSubmit);
+            if(this.state.formType === 'Ediy player') {
 
+
+            } else {
+                firebasePlayers.push(dataToSubmit).then(() => {
+                    this.props.history.push('/admin_players')
+
+                })
+                .catch(err => {
+                    this.setState({ formError : true})
+                })
+            }
+            
 
         } else {
             this.setState({
@@ -160,14 +180,25 @@ class AddEditPlayers extends Component {
     }
 
     resetImage = () => {
-
+        const newFormdata ={...this.state.formadata}
+    
+        newFormdata['image'].value = '';
+        newFormdata['image'].valid = false;
+        this.setState({
+            defaultImg : '',
+            formdata: newFormdata
+            
+        })
+        console.log(newFormdata);
     }
 
-    storeFilename = () => {
-        
+    storeFilename = (filename) => {
+        this.updateForm({ id : 'image'}, filename)
     }
 
     render() {
+        console.log(this.state.formdata);
+        
         return (
             <AdminLayout>
                 <div className="editplayers_dialog_wrapper">
@@ -176,14 +207,14 @@ class AddEditPlayers extends Component {
                 <div>
                     <form onSubmit={(evt) => this.onSubmit(evt)}>
 
-                    <FileUploader 
-                        dir="players" // dir is a folder path to the firebase db
-                        tag={"Player image"}
-                        defaultImg={this.state.defaultImg}
-                        defaultImgName={this.state.formdata.image.value}
-                        resetImagee={() => this.resetImage()}
-                        filename={(filename) => this.storeFilename(filename)}
-                    />
+                    <Fileuploader
+                                dir="players"
+                                tag={"Player image"}
+                                defaultImg={this.state.defaultImg}
+                                defaultImgName={this.state.formdata.image.value}
+                                resetImage={()=> this.resetImage()}
+                                filename={(filename)=> this.storeFilename(filename)}
+                            />
 
                         <FormField
                             id={'name'}
