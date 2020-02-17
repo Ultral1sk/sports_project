@@ -43,6 +43,7 @@ class TheMatches extends Component {
 
                         </div>
                         <MatchesList matches={state.filterMatches} />
+                      
                     </div>
                     <div className="right">
                         <LeagueTable />
