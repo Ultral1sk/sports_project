@@ -14,6 +14,8 @@ import AddEditMatch from './Components/admin/matches/addEditMatch'
 import AddMatch from './Components/admin/matches/addEditMatch'
 import AdminPlayers from './Components/admin/players/index'
 import AddEditPlayers from './Components/admin/players/addEditPlayers'
+import TheTeam from './Components/theTeam/index'
+
 // this is in this case the App component
 const Routes = (props) => {
     return (
@@ -29,9 +31,9 @@ const Routes = (props) => {
                     <PrivateRoute {...props} path="/dashboard"                      exact component={Dashboard} />
                     <PublicRoute  {...props} restricted={true}                      path='/sign_in' exact component={SignIn} />
                     {/*  if the user is signed in they will not be able to acces the sign_in component they will be redirected directly to the dashboard    */}
-                    <PublicRoute  {...props} restricted={false}                     path='/' exact component={Home} />
+                    <PublicRoute  {...props}                    path='/the_team' exact component={TheTeam} />
                     {/* if the boolena is false the home route can be accessed by anyone */}
-                   
+                    <PublicRoute  {...props} restricted={false}                     path='/' exact component={Home} />
                 </Switch>
             </Layout>
         </div>
