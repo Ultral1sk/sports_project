@@ -7,6 +7,7 @@ import PublicRoute from './Components/authRoutes/publicRoutes'
 
 import Home from './Components/Home/index'
 import SignIn from './Components/signIn/'
+import NotFound from './Components/notFoundPage/notFound'
 
 import Dashboard from './Components/admin/Dashboard'
 import AdminMatches from './Components/admin/matches'
@@ -36,6 +37,8 @@ const Routes = (props) => {
                     <PublicRoute  {...props}                                        path='/the_team' exact component={TheTeam} />
                     {/* if the boolena is false the home route can be accessed by anyone */}
                     <PublicRoute  {...props} restricted={false}                     path='/' exact component={Home} />
+                    <PublicRoute  {...props} restricted={false}                     component={NotFound} />
+
                 </Switch>
             </Layout>
         </div>
