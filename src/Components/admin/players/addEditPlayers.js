@@ -38,67 +38,74 @@ class AddEditPlayers extends Component {
                     validationMessage: '',
                     showlabel: true
                 },
-                lastname: {
-                    element: 'input',
-                    value: '',
-                    config: {
-                        label: 'Player Last Name',
-                        name: 'lastname_input',
+                lastname:{
+                    element:'input',
+                    value:'',
+                    config:{
+                        label: 'Player Last name',
+                        name:'lastname_input',
                         type: 'text'
                     },
-                    validation: {
+                    validation:{
                         required: true
                     },
                     valid: false,
-                    validationMessage: '',
+                    validationMessage:'',
                     showlabel: true
                 },
-                number: {
-                    element: 'input',
-                    value: '',
-                    config: {
+                number:{
+                    element:'input',
+                    value:'',
+                    config:{
                         label: 'Player number',
-                        name: 'number_input',
+                        name:'number_input',
                         type: 'text'
                     },
-                    validation: {
+                    validation:{
                         required: true
                     },
                     valid: false,
-                    validationMessage: '',
+                    validationMessage:'',
                     showlabel: true
                 },
-                position: {
-                    element: 'select',
-                    value: '',
-                    config: {
+                position:{
+                    element:'select',
+                    value:'',
+                    config:{
                         label: 'Select a position',
-                        name: 'select_position',
-                        type: 'select ',
+                        name:'select_position',
+                        type: 'select',
                         options: [
-                            { key: 'Keeper', value: 'Keeper' },
-                            { key: 'Defence', value: 'Defence' },
-                            { key: 'Midfielder', value: 'Midfielder' },
-                            { key: 'Striker', value: 'Striker' },
-
+                            {key:"Keeper",value:"Keeper"},
+                            {key:"Defence",value:"Defence"},
+                            {key:"Midfield",value:"Midfield"},
+                            {key:"Striker",value:"Striker"}
                         ]
                     },
-                    validation: {
+                    validation:{
                         required: true
                     },
                     valid: false,
-                    validationMessage: '',
+                    validationMessage:'',
                     showlabel: true
                 },
-                image : {
-                    element : 'image',
-                    value : '',
-                    validation : {
+                image:{
+                    element:'image',
+                    value:'',
+                    validation:{
                         required: true
                     },
-                    valid: true
+                    valid:false
                 }
             }
+        }
+    }
+    updateFields = (player, playerId, formType , defaultImg) =>{
+        const newFormdata = { ...this.state.formdata}
+
+        for(let key in newFormdata){
+            newFormdata[key].value = player[key];
+            newFormdata[key].valid = true
         }
     }
 
@@ -117,8 +124,6 @@ class AddEditPlayers extends Component {
             formdata: newFormdata
         })
     }
-
-
     componentDidMount(){
         const playerId = this.props.match.params.id;
 
@@ -234,16 +239,17 @@ class AddEditPlayers extends Component {
     }
 
     render() {
+        console.log(this.state.formdata);
+        
         return (
             <AdminLayout>
                 <div className="editplayers_dialog_wrapper">
-                    <h2>
-                        {this.state.formType}
-                    </h2>
-                    <div>
-                        <form onSubmit={(event)=> this.submitForm(event)}>
-            
-                            <Fileuploader
+                    <h2>{this.state.formType}</h2>
+                </div>
+                <div>
+                    <form onSubmit={(evt) => this.onSubmit(evt)}>
+
+                    <Fileuploader
                                 dir="players"
                                 tag={"Player image"}
                                 defaultImg={this.state.defaultImg}
@@ -252,31 +258,27 @@ class AddEditPlayers extends Component {
                                 filename={(filename)=> this.storeFilename(filename)}
                             />
 
+                        <FormField
+                            id={'name'}
+                            formdata={this.state.formdata.name}
+                            change={(element) => this.updateForm(element)}
+                        />
+                        <FormField
+                            id={'lastname'}
+                            formdata={this.state.formdata.lastname}
+                            change={(element) => this.updateForm(element)}
+                        />
+                        <FormField
+                            id={'number'}
+                            formdata={this.state.formdata.number}
+                            change={(element) => this.updateForm(element)}
+                        />
+                        <FormField
+                            id={'position'}
+                            formdata={this.state.formdata.position}
+                            change={(element) => this.updateForm(element)}
+                        />
 
-                            <FormField
-                                id={'name'}
-                                formdata={this.state.formdata.name}
-                                change={(element)=> this.updateForm(element)}
-                                
-                            />
-
-                            <FormField
-                                id={'lastname'}
-                                formdata={this.state.formdata.lastname}
-                                change={(element)=> this.updateForm(element)}
-                            />
-
-                            <FormField
-                                id={'number'}
-                                formdata={this.state.formdata.number}
-                                change={(element)=> this.updateForm(element)}
-                            />
-
-                            <FormField
-                                id={'position'}
-                                formdata={this.state.formdata.position}
-                                change={(element)=> this.updateForm(element)}
-                            />
 
                         <div className="success_label">{this.state.formSuccess}</div>
                             {this.state.formError ? 
@@ -293,7 +295,6 @@ class AddEditPlayers extends Component {
                         </form>
 
                     </div>
-                </div>
             </AdminLayout>
         );
     }

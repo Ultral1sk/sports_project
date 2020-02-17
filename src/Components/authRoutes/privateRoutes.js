@@ -13,7 +13,7 @@ const PrivateRoutes = ({
 }) => {
     // a router that is going to accept the remaining props and return 
     //na function which is going to render something
-    console.log(remaining)
+  
     return <Route {...remaining} component={(props) => (
         user ? 
             // here Comp is Dashboard component which we are getting from the parrent component in this case routes component
