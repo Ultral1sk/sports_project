@@ -1,10 +1,10 @@
 import React from 'react'
-import NewsText from './NewsText'
+import NewsCard from './NewsCard'
 
 const TeamNews = () => {
     return (
-        <div style={{height : '100%'}}>
-            <NewsText />
+        <div>
+            <NewsCard />
         </div>
     )
 }

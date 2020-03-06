@@ -1,0 +1,28 @@
+.news_outer_wrapper {  background-color: white; padding-top: 3rem; h2 { padding-left: 10.5rem;}}
+.news_inner_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+   
+    margin-bottom : 1rem;
+}
+
+.newsLeft{
+    width: 41.5vw;
+    height: 50vh;
+    background : url('../../../Resources/images/players/heat/newsImages/butler1.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0.5rem;  
+       
+
+}
+
+.newsRight{
+    width: 41.5vw;
+    height: 50vh;
+    background : url('../../../Resources/images/players/heat/newsImages/derrick1.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0.5rem;  
+}

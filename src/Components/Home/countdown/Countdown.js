@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade'
-import NewsCard from './NewsCard'
+import CountdownCard from './CountdownCard'
 import { Link } from 'react-router-dom'
+import Bgvideo from './Bgvideo'
 import dallas from '../../../Resources/images/logos/dallas.png'
 import rockets from '../../../Resources/images/logos/rockets.png'
 import heat from '../../../Resources/images/logos/heatThree.png'
 import boston from '../../../Resources/images/logos/boston.png'
 
-class NewsText extends Component {
+class Countdown extends Component {
     constructor(props) {
         super(props)
 
@@ -38,7 +39,7 @@ class NewsText extends Component {
                 minutes,
                 seconds
             })
-
+            
         }
     }
 
@@ -51,7 +52,8 @@ class NewsText extends Component {
     render() {
         return (
             <Fade delay={1000}>
-
+    <Bgvideo>
+                
                 <div className="countdown_wrapper">
                     <div className="countdown_top">
                         Next Game
@@ -102,7 +104,7 @@ class NewsText extends Component {
                         <h2 style={{padding : '2rem 9rem'}}>Upcoming Games</h2>
                         <div className="newsCards_inside_wrapper">
                             <div>
-                                <NewsCard
+                                <CountdownCard
                                     date="Mon, Mar 2 | 7:00 PM "
                                     tickets="Travel"
                                     homeLogo={heat}
@@ -111,7 +113,7 @@ class NewsText extends Component {
                                 />
                             </div>
                             <div>
-                                <NewsCard
+                                <CountdownCard
                                     date="Wed, Mar 4 | 8:30 PM "
                                     tickets="Tickets"
                                     homeLogo={heat}
@@ -120,7 +122,7 @@ class NewsText extends Component {
                                 />
                             </div>
                             <div>
-                                <NewsCard
+                                <CountdownCard
                                     date="Mon, Mar 6 | 7:30 PM "
                                     tickets="Tickets"
                                     homeLogo={heat}
@@ -134,12 +136,14 @@ class NewsText extends Component {
                         <Link to="">See full Schedule</Link>
                     </div>
                     </div>
+                        
                    
                 </div>
-
+            
+                    </Bgvideo>
             </Fade>
         )
     }
 }
 
-export default NewsText
+export default Countdown

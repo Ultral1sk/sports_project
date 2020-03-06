@@ -1,5 +1,6 @@
 @import '../../Components/Header_Footer/header.scss';
-@import '../../Components/Home/teamNews/newstext.scss';
+@import '../../Components/Home/countdown/countdown.scss';
+@import '../../Components/Home/teamNews/teamNews.scss';
 
 body {
     margin:0;
@@ -14,9 +15,7 @@ a {
     color: inherit;
 }
 
-.link_logo {
-    display: inline-block;
-}
+
 
 
 
