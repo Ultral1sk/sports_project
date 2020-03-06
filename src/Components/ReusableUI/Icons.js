@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import mcitylogo from '../../Resources/images/logos/manchester_city_logo.png'
+
 
 
 // creating a reusable component
@@ -12,7 +12,7 @@ const CityLogo = (props) => {
                         style={{
                             width       : props.width,
                             height      : props.height,
-                            background  : `url(${mcitylogo}) no-repeat`
+                            background  : `url(${props.url}) no-repeat`
                         }}
                     >
                     </div>

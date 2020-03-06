@@ -65,7 +65,7 @@ const FormField = ({formdata,id,change}) => {
             break;
             default:
                 formTemplate = null;
-
+ 
         }
         return formTemplate;
     }

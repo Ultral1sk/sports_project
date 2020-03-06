@@ -3,6 +3,7 @@ import Featured from './featured/index'
 import Matches from './matches/index'
 import MeetPlayers from './meetPlayers/index'
 import PromotionalEmail from './promoEmail/index'
+import TeamNews from './teamNews/index'
 
 const Home = (props) => {
     return (
@@ -10,6 +11,7 @@ const Home = (props) => {
           <Featured />
           <Matches />
           <MeetPlayers />
+          <TeamNews />
           <PromotionalEmail />
         </div>
     )

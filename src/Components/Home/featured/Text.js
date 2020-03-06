@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import { easePolyOut } from 'd3-ease';
 import Animate from 'react-move/Animate'
 
-import FeaturedPlayer from '../../../Resources/images/featured_player.png'
+import trophy from '../../../Resources/images/logos/trophy.png'
 
 
 class Text extends Component {
 
     // function that renders a component it is with parenthesies not with curly brackets
-    animateNumber = () => (
+    animateText = () => (
         <Animate
 
             show={true}
@@ -31,13 +31,13 @@ class Text extends Component {
             {({ opacity, rotate }) => {
 
                 return (
-                    <div className="featured_number"
+                    <div className="featured_text"
                         style={{
                             opacity,
-                            transform: `translate(260px, 170px) rotateY(${rotate}deg)`
+                            transform: `translate(-25px, 120px) rotateY(${rotate}deg)`
                         }}
                     >
-                        3
+                        NATION
                     </div>
                 )
 
@@ -47,92 +47,19 @@ class Text extends Component {
 
     )
 
-    animateFirst = () => (
-        <Animate
+    
 
-            show={true}
-            // the starting behaviour of the animation
-            start={{
-                opacity: 0,
-                x: 503,
-                y: 450
+   
 
-            }}
-
-            // on render behaviour of the animation
-            enter={{
-                opacity: [1],
-                x: [273],
-                y: [450],
-                timing: { duration: 500, ease: easePolyOut }
-            }}
-        >
-            {/* a function called inside the ANIMATION which destructures the values which the <div> element is going to
-        render or receive when it is being rendered */}
-            {({ opacity, x, y }) => {
-
-                return (
-                    <div className="featured_first"
-                        style={{
-                            opacity,
-                            transform: `translate(${x}px, ${y}px)`
-                        }}
-                    >
-                        League
-                </div>
-                )
-
-            }}
-
-        </Animate>
-    )
-
-    animateSecond = () => (
-        <Animate
-
-            show={true}
-            // the starting behaviour of the animation
-            start={{
-                opacity: 0,
-                x: 503,
-                y: 586
-
-            }}
-
-            // on render behaviour of the animation
-            enter={{
-                opacity: [1],
-                x: [273],
-                y: [586],
-                timing: { delay: 300, duration: 500, ease: easePolyOut }
-            }}
-        >
-            {/* a function called inside the ANIMATION which destructures the values which the <div> element is going to
-        render or receive when it is being rendered */}
-            {({ opacity, x, y }) => {
-
-                return (
-                    <div className="featured_second"
-                        style={{
-                            opacity,
-                            transform: `translate(${x}px, ${y}px)`
-                        }}
-                    >
-                        Championship
-                </div>
-                )
-
-            }}
-
-        </Animate>
-    )
-
-    animatePlayer = () => (
+    animateTrophy = () => (
+        // function that renders a component it is with parenthesies not with curly brackets
         <Animate
             show={true}
+               // the starting behaviour of the animation
             start={{
                 opacity: 0,
             }}
+                  // on render behaviour of the animation
             enter={{
                 opacity: [1],
                 timing: { delay: 800, duration: 500, ease: easePolyOut }
@@ -142,11 +69,11 @@ class Text extends Component {
 
             {({ opacity }) => {
                 return (
-                    <div className="featured_player"
+                    <div className="featured_trophy"
                         style={{
                             opacity,
-                            background: `url(${FeaturedPlayer})`,
-                            transform: `translate(550px, 201px)`
+                            background: `url(${trophy})`,
+                            transform: `translate(1150px, 152px)`
                         }}
                     >
 
@@ -161,10 +88,8 @@ class Text extends Component {
     render() {
         return (
             <div className="featured_text">
-                {this.animatePlayer()}
-                {this.animateNumber()}
-                {this.animateFirst()}
-                {this.animateSecond()}
+                {this.animateTrophy()}
+                {this.animateText()}
             </div>
         )
     }

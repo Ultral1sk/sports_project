@@ -1,7 +1,12 @@
+@import '../../Components/Header_Footer/header.scss';
+@import '../../Components/Home/teamNews/newstext.scss';
+
 body {
     margin:0;
     padding:0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Alegreya SC', ;
+
+
 }
 
 a {
@@ -13,12 +18,11 @@ a {
     display: inline-block;
 }
 
-.bck_blue {
-    background: #0d1831;
-}
 
-.bck_lblue {
-    background: #98c5e9;
+
+.bck_blue {
+    background: rgb(2, 2, 2);
+   
 }
 
 .img_cover {
@@ -51,9 +55,9 @@ select {
 
 
 button {
-    background: #0d1831;
+    background: #4e4e4e;
     color: #ffffff;
-    border: 1px solid #0d1831;
+    border: 1px solid #ce0000;
     padding: 5px 10px;
     margin-top: 10px;
     font-size: 15px;
@@ -162,59 +166,63 @@ footer .footer_discl {
 ===============================*/
 
 .featured_wrapper {
+    background: url('../images/players/heat/heatBackground2.jpg');
+    background-size: cover;
+    background-position: bottom;
     margin: 0 auto;
-    width: 1280px;
-    margin-top: 90px;
+    width: 100%;
+    margin-top: 220px;
     height: 800px;
     overflow: hidden;
+ 
+
+}
+
+.featured_heat_background {
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: linear-gradient(to left top, #000000f1, #000000, #000000, #25252500, #25252500, #222222, #38383800, #78777800, #6b6b6b7a, #1b1b1b3a, #2a2526, #140a0a);
+
+
 }
 
 .featured_stripes {
-    position: relative
+    position: relative;
+    width: 100%;
+    display:flex;
 }
 .featured_text {
     position: relative;
     font-family: 'Righteous', cursive;
+    width: 100%;
+
 }
 
 
 .featured_stripes .stripe {
-    width: 230px;
-    height: 1200px;
+    width: 40vw;
+    height: 100vh;
     position: absolute;
 }
 
-.featured_number {
-    font-size: 270px;
-    color: #ffffff;
-    transform: translate(260px,170px);
+.featured_text{
+    width: 50%;
+    font-size: 150px;
+    color: #d13c3cc2;
+    transform: translate(60px,50px);
     position: absolute;
 }
 
-.featured_player {
+.featured_trophy {
     width: 500px;
-    height: 500px;
+    height: 600px;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     position: absolute;
 }
-.featured_first {
-    position: absolute;
-    background: #0e1731;
-    color: #ffffff;
-    font-size: 92px;
-    text-transform: uppercase;
-    padding: 0px 20px;
-}
 
-.featured_second {
-    position: absolute;
-    background: #0e1731;
-    color: #ffffff;
-    font-size: 92px;
-    text-transform: uppercase;
-    padding: 0px 20px;
-}
+
 
 /*=============================
             MATCHES HOME
@@ -222,7 +230,7 @@ footer .footer_discl {
 
 .home_matches_wrapper {
     background: #98c5e9;
-    margin-top:9px;
+
     padding: 50px 0px;
 }
 
@@ -472,7 +480,7 @@ footer .footer_discl {
     font-size: 150px;
     font-family: 'Righteous', cursive;
     flex-grow: 1;
-    color:#d5ebfd;
+    color:#4e4e4e;
     line-height: 135px;
 }
 .promotion_wrapper .promotion_animation .left span {

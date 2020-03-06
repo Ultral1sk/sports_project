@@ -1,6 +1,6 @@
 import React from 'react'
 import Zoom from 'react-reveal/Zoom'
-import Jersey from '../../../Resources/images/jersey.jpg'
+import Jersey from '../../../Resources/images/jersey.jpeg'
 
 const PromoAnimation = () => {
     return (

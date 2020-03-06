@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^1.4.3",
+    "@material-ui/core": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -12,6 +12,7 @@
     "dotenv": "^8.2.0",
     "firebase": "^7.8.0",
     "node-pre-gyp": "^0.14.0",
+    "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-firebase-file-uploader": "^2.4.1",

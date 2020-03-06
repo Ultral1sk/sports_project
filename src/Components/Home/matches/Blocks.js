@@ -33,7 +33,6 @@ class Blocks extends Component {
                     <div className="item">
                         <div className="wrapper">
                             <MatchesBlock match={match} />
-                    
                         </div>
                     </div>
                 </Slide>

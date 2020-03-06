@@ -8,8 +8,11 @@ import Text from './Text'
 const Featured = () => {
     return (
         <div className="featured_wrapper">
+            <div className="featured_heat_background">
             <Stripes />
             <Text />
+            </div>
+     
 
         </div>
     )

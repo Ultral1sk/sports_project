@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { easePolyOut } from 'd3-ease';
 import Animate from 'react-move/Animate'
+import jimmy from '../../../Resources/images/players/heat/jimmy3.png'
+import dragon from '../../../Resources/images/players/heat/dragon.png'
+import bam from '../../../Resources/images/players/heat/bam.png'
 
 
 export class Stripes extends Component {
@@ -8,24 +11,24 @@ export class Stripes extends Component {
     state = {
         stripes: [
             {
-                background: '#98c5e9',
-                left : 120,
-                rotate : 25,
-                top : -260,
-                delay : 0,
-            },
-            {
-                background: '#ffffff',
-                left : 360,
-                rotate : 25,
-                top : -379,
+                background: `url(${jimmy}) center center no-repeat`,
+                backgroundSize : 'cover',
+
+                left : 1250,
+                top :  48,
                 delay : 200,
             },
             {
-                background: '#98c5e9',
+                background: `url(${dragon}) center center no-repeat `,
+                backgroundSize : 'cover',
+                left : 760,
+                top : 62,
+                delay : 200,
+            },
+            {
+                background: `url(${bam}) no-repeat `,
                 left : 600,
-                rotate : 25 ,
-                top : -498,
+                top : 203,
                 delay : 400,
             }
         ]
@@ -41,10 +44,9 @@ export class Stripes extends Component {
                 show={true}
 
                 start={{
-                    background: '#ffffff',
+                    background: '',
                     opacity : 0,
                     left : 0,
-                    rotate : 0,
                     top : 0
 
                 }}
@@ -52,21 +54,20 @@ export class Stripes extends Component {
                     background: [stripe.background],
                     opacity : [1],
                     left    : [stripe.left],
-                    rotate  : [stripe.rotate],
                     top     : [stripe.top],
-                    timing  : {delay : stripe.delay, duration : 200, ease : easePolyOut}
+                    timing  : {delay : stripe.delay, duration : 400, ease : easePolyOut}
                     
                 }}
             >
 
-                {({opacity, left,rotate,  top,  background}) => {
+                {({opacity, left, top, background}) => {
                     return (
                         <div
                             className="stripe"
                             style={{
                                 background,
                                 opacity,
-                                transform : `rotate(${rotate}deg) translate(${left}px, ${top}px)`
+                                transform : `translate(${left}px, ${top}px)`
                             }}
                         >
                         </div>

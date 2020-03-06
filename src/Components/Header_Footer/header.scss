@@ -1,0 +1,19 @@
+.header_inner_wrapper {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2   { font-size: 2.4vw; margin-bottom: 0; }
+    span { font-size: 2.4vw;  font-family: 'Nothing You Could Do'; padding-top : 2rem; }
+   
+    
+}
+    
+.header_inner_span {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    font-size: 80%;
+}
+
