@@ -13,7 +13,7 @@ class Countdown extends Component {
         super(props)
 
         this.state = {
-            deadline: 'Mar, 7, 2020',
+            deadline: 'Mar, 10, 2020',
             days: '0',
             hours: '0',
             minutes: '0',

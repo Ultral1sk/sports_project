@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 // creating a reusable component
-const CityLogo = (props) => {
+const HeatLogo = (props) => {
 
     const template = <div 
                         className="img_cover"
@@ -31,4 +31,4 @@ const CityLogo = (props) => {
     }
 }
 
-export default CityLogo
+export default HeatLogo

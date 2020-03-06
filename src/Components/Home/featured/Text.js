@@ -34,7 +34,7 @@ class Text extends Component {
                     <div className="featured_text"
                         style={{
                             opacity,
-                            transform: `translate(-25px, 120px) rotateY(${rotate}deg)`
+                            transform: `translate(-25px, 320px) rotateY(${rotate}deg)`
                         }}
                     >
                         NATION
@@ -45,11 +45,7 @@ class Text extends Component {
 
         </Animate>
 
-    )
-
-    
-
-   
+    )   
 
     animateTrophy = () => (
         // function that renders a component it is with parenthesies not with curly brackets
@@ -73,7 +69,7 @@ class Text extends Component {
                         style={{
                             opacity,
                             background: `url(${trophy})`,
-                            transform: `translate(1150px, 152px)`
+                            transform: `translate(1150px, 277px)`
                         }}
                     >
 

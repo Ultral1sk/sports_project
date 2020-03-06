@@ -22,19 +22,16 @@ class TeamNewsCarousel extends React.Component {
   render() {   
     return (
       <div style={{width : '88%', margin : '0 auto'}}>
-
-   
-      <Carousel
       
+      <Carousel 
         slidesPerPage={5}
         slidesPerScroll={2}
         offset={18}
         itemWidth={389}
         arrowLeft={<ArrowBackIosIcon  style={{ cursor: 'pointer' }} />}
         arrowRight={<ArrowForwardIosIcon  style={{ cursor: 'pointer' }} />}
-
-    addArrowClickHandler
-        infinite
+        addArrowClickHandler
+     
     >
       <CarouselCard key={1} bck={imgOne}   link={true} linkTo='/'  width="100%" height="50vh" />
       <CarouselCard key={2} bck={imgTwo}   link={true} linkTo='/'  width="100%" height="50vh" />

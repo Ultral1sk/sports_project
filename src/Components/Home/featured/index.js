@@ -2,14 +2,14 @@
 // elements at the top is my preference to the names im giving in my raect app
 
 import React from 'react'
-import Stripes from './Stripes'
+import FeaturedPlayers from './FeaturedPlayers'
 import Text from './Text'
 
 const Featured = () => {
     return (
         <div className="featured_wrapper">
             <div className="featured_heat_background">
-            <Stripes />
+            <FeaturedPlayers />
             <Text />
             </div>
      

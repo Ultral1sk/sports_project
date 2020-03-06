@@ -10,7 +10,7 @@ const Home = (props) => {
         <div className="bck_blue">
           <Featured />
           <TeamNews />
-          <Matches />
+          {/* <Matches /> */}
           <MeetPlayers />
           <CountdownRender />
           <PromotionalEmail />

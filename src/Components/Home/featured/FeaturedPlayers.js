@@ -6,7 +6,7 @@ import dragon from '../../../Resources/images/players/heat/dragon.png'
 import bam from '../../../Resources/images/players/heat/bam.png'
 
 
-export class Stripes extends Component {
+export class FeaturedPlayers extends Component {
     // giving the state the real values
     state = {
         stripes: [
@@ -15,20 +15,20 @@ export class Stripes extends Component {
                 backgroundSize : 'cover',
 
                 left : 1250,
-                top :  48,
+                top :  148,
                 delay : 200,
             },
             {
                 background: `url(${dragon}) center center no-repeat `,
                 backgroundSize : 'cover',
                 left : 760,
-                top : 62,
+                top : 162,
                 delay : 200,
             },
             {
                 background: `url(${bam}) no-repeat `,
                 left : 600,
-                top : 203,
+                top : 327,
                 delay : 400,
             }
         ]
@@ -96,4 +96,4 @@ export class Stripes extends Component {
     }
 }
 
-export default Stripes
+export default FeaturedPlayers
