@@ -11,7 +11,7 @@ const MiscellaneousTag = (props) => {
             background: props.bck,
             fontSize : props.size,
             color: props.color,
-            padding: '5px 10px',
+            padding: props.padding,
             display: 'inline-block',
             fontFamily : 'Righteous'
         }}

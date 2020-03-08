@@ -5,7 +5,8 @@
 body {
     margin:0;
     padding:0;
-    font-family: 'Alegreya SC', ;
+    font-family: 'Righteous', cursive;
+
 
 
 }
@@ -19,8 +20,8 @@ a {
 
 
 
-.bck_blue {
-    background: rgb(2, 2, 2);
+.footer_bck {
+  background-color: black;
    
 }
 
@@ -170,7 +171,6 @@ footer .footer_discl {
     background-position: right;
     margin: 0 auto;
     width: 100%;
-    
     height: 100vh;
     overflow: hidden;
  
@@ -228,7 +228,7 @@ footer .footer_discl {
 ===============================*/
 
 .home_matches_wrapper {
-    background: #98c5e9;
+    font-family: 'Righteous', cursive;
 
     padding: 50px 0px;
 }
@@ -392,71 +392,79 @@ footer .footer_discl {
 ===============================*/
 
 
-.home_meetplayers { 
-    background: #ffffff;
-}
 
-.home_meetplayers_wrapper {
-    padding-bottom: 100px;
-    min-height: 600px;
-}
-
-.home_meetplayers .home_card_wrapper {
-    position: relative;
-    float: left;
-    width: 630px;
-    min-height: 600px;
-}
-
-.home_meetplayers .home_text_wrapper {
-    float: right;
-    width: 390px;
-}
-
-/*=============================
-            MATCHES BLOCK
-===============================*/
 
 
 .player_card_wrapper {
-    background: #ffffff;
-    border: 1px solid #ececec;
-    width: 300px;
-    padding: 10px 10px 20px 10px;
-    font-family: 'Righteous';
+    position: relative;
+    width: 100%;
+    display: flex;
+    font-family: 'Righteous', cursive;
+    margin-top: 3rem;
+
 }
 .player_card_wrapper .player_card_thmb {
-    border: 1px solid #eeeeee;
-    width:100%;
-    height:250px;
+    position: relative;
+    width:80%;
+    height:90vh;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: contain !important;
 }
 
 .player_card_wrapper .player_card_nfo {
-    position: relative;
+    text-align: end;
+    width: 100%;
+    padding-left: 10%;
+  
+    
 }
 .player_card_wrapper .player_card_number {
-    color: #d6ecfe;
-    font-size: 185px;
+    position: absolute;
+    z-index: -1;
+    top: 100px;
+    left: 120px;
+    color: rgb(138, 0, 0);
+    font-size: 400px;
     text-align: right;
     line-height: 160px;
 }
 
-.player_card_wrapper .player_card_name {
-    position: absolute;
-    bottom: 0px;
+.playerd_card_abilities {
+    font-size: 20px;
+    text-align: end;
+
+    span {
+        padding-left: 3rem;
+    }
+   
+}
+.player_card_statistics {
+    padding-top: 3rem;
+    font-size: 3rem;
+
+    span {
+        padding-left: 3rem;
+    }
+}
+.player_card_about {
+    float: right;
+    width: 40%;
 }
 
-.player_card_wrapper .player_card_name span { 
+
+.player_card_wrapper .player_card_name  { 
     display: block;
-    font-size: 25px;
-    color: #0d1831;
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #050505;
 }
 
-.home_text_wrapper {
-    margin-top: 70px;
+.home_card_button {
+    width: 100%;
+    text-align: end;
+    margin-top: 1.5rem;
+    
 }
 
 

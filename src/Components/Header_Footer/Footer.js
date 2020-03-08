@@ -3,7 +3,7 @@ import  HeatLogo  from '../ReusableUI/Icons'
 
 const Footer = () => {
     return (
-        <footer className="bck_blue">
+        <footer className="footer_bck">
             <div className="footer_logo">
                 <HeatLogo 
                     width="70px"

@@ -21,7 +21,7 @@ class TeamNewsCarousel extends React.Component {
   
   render() {   
     return (
-      <div style={{width : '88%', margin : '0 auto'}}>
+      <div style={{width : '88%', margin : '0 auto', marginBottom: '4rem'}}>
       
       <Carousel 
         slidesPerPage={5}
