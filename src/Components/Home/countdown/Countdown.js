@@ -14,7 +14,7 @@ class Countdown extends Component {
         super(props)
 
         this.state = {
-            deadline: 'Mar, 10, 2020',
+            deadline: 'Mar, 13, 2020',
             days: '0',
             hours: '0',
             minutes: '0',
@@ -58,7 +58,7 @@ class Countdown extends Component {
 
                     <div className="countdown_wrapper">
                         <div className="video-container" style={{ zIndex: -1 }}>
-                            <video style={{ width: '100%', height: '100%' }} preload="preload" id="video" autoplay="autoplay" loop="loop" muted>
+                            <video style={{ width: '100%', height: '100%' }} preload="preload" id="video" autoPlay="autoplay" loop="loop" muted>
                                 <source src={this.state.videoURL} type="video/mp4" />
                                 <p>Your user agent does not support the HTML5 Video Element.</p>
                             </video>

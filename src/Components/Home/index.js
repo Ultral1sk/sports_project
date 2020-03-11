@@ -9,9 +9,9 @@ const Home = (props) => {
     return (
         <div className="bck_blue">
           <Featured />
-          <TeamNews />
+          <Matches />
           <CountdownRender />
-          {/* <Matches /> */}
+          <TeamNews />
           <MeetPlayers />
           <PromotionalEmail />
         </div>

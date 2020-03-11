@@ -6,27 +6,29 @@ const MatchesHome = () => {
     return (
         <div className="home_matches_wrapper">
             <div className="container">
-                <MiscellaneousTag 
-                    bck="#0e1731"
+                <MiscellaneousTag
+                    color="black"
                     size="50px"
-                    color="#ffffff"
-                    
+
+
                 >
-                Matches
+                    Matches
                 </MiscellaneousTag>
                 <Blocks />
+                <div style={{ textAlign: 'center' }}>
 
-                <MiscellaneousTag
-                   bck="#ffffff"
-                   size="22px"
-                   color="#0e1731"
-                   link={true}
-                   linkTo='/the_matches'
-                >
-                 
-                    See more matches
+                    <MiscellaneousTag
+                        bck="rgb(138, 0, 0)"
+                        size="45px"
+                        color="white"
+                        link={true}
+                        linkTo='/the_matches'
+                    >
+
+                        Click for more matches
                 </MiscellaneousTag>
-    
+                </div>
+
             </div>
         </div>
     )

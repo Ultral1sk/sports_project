@@ -1,6 +1,4 @@
 import React from 'react'
-import MiscellaneousTag from './miscellaneous'
-
 
 const PlayerCard = (props) => {
     return (
@@ -46,12 +44,8 @@ const PlayerCard = (props) => {
                             </div>
                             <div className="player_card_about">
                                 {props.about}
-                                <div className="home_card_button">
-                                <MiscellaneousTag link={true} linkTo='/the_players' bck="#8a0000" padding="1rem 1.5rem">See more</MiscellaneousTag>
-                                </div>
-                            </div>
-                                           
-
+                              
+                            </div>                                 
                         </div>
                     </div>
                 </div>

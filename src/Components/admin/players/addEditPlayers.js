@@ -76,10 +76,11 @@ class AddEditPlayers extends Component {
                         name:'select_position',
                         type: 'select',
                         options: [
-                            {key:"Keeper",value:"Keeper"},
-                            {key:"Defence",value:"Defence"},
-                            {key:"Midfield",value:"Midfield"},
-                            {key:"Striker",value:"Striker"}
+                            {key:"Point Guard",value:"Point Guard"},
+                            {key:"Shooting Guard",value:"Shooting Guard"},
+                            {key:"Small Forward",value:"Small Forward"},
+                            {key:"Power Forward",value:"Power Forward"},
+                            {key:"Center",value:"Center"}
                         ]
                     },
                     validation:{

@@ -63,7 +63,7 @@ class TheMatches extends Component {
                     <div className="left">
                         <div className="match_filters">
                             <div className="match_filters_box">
-                                <div className="tag">
+                                <div className="tag" style={{color : 'white'}}>
                                     Show Match
                                 </div>
                                 <div className="cont">
@@ -85,7 +85,7 @@ class TheMatches extends Component {
                                 </div>
                             </div>
                             <div className="match_filters_box">
-                                <div className="tag">
+                                <div className="tag" style={{color : 'white'}}>
                                     Result game
                                 </div>
                                 <div className="cont">
@@ -104,8 +104,8 @@ class TheMatches extends Component {
                                     >
                                         L
                                     </div>
-                                    <div className={`option ${state.resultFilter === 'D' ? 'active' : ''}`}
-                                     onClick={() => this.showResult('D')}
+                                    <div className={`option ${state.resultFilter === 'OT' ? 'active' : ''}`}
+                                     onClick={() => this.showResult('OT')}
                                     >
                                         D
                                     </div>

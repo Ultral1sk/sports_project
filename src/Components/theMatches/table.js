@@ -13,7 +13,8 @@ const style ={
         padding: '4px 16px 4px 11px',
         borderBottom: '1px solid #ffffff',
         color: '#ffffff',
-        textAlign: 'center'
+        textAlign: 'center',
+        background: '#6b6b6b'
     }
 }
 
@@ -68,7 +69,7 @@ class LeagueTable extends Component {
                             <TableCell style={style.cell}>Team</TableCell>
                             <TableCell style={style.cell}>W</TableCell>
                             <TableCell style={style.cell}>L</TableCell>
-                            <TableCell style={style.cell}>D</TableCell>
+                            <TableCell style={style.cell}>OT</TableCell>
                             <TableCell style={style.cell}>Pts</TableCell>
                         </TableRow>
                     </TableHead>

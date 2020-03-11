@@ -7,6 +7,7 @@ import HeatLogo from '../ReusableUI/Icons'
 import heatLogo from '../../Resources/images/logos/heatThree.png'
 
 
+
 const AppBarStyling = {
 
     backgroundColor: 'black',
@@ -56,11 +57,12 @@ export class Header extends Component {
     render() {
         return (
             <>
+                 
                 <AppBar
                     
                     style={{ ...AppBarStyling }}
                 >
-
+             
                     <Toolbar className={this.state.visible ? "ToolbarLogoStylingOff" : "ToolbarLogoStylingOn"}>
                         <div className="header_wrapper">
                             <div className="header_inner_wrapper">
@@ -93,9 +95,9 @@ export class Header extends Component {
                             :
                             ''
                          }
-                            <Link to="/the_team">
+                            <Link to="/team_news">
                                 <Button color="inherit" style={{ ...ToolBarStyling }}>
-                                    The Team
+                                    Team News
                                 </Button>
                             </Link>
                             <Link to="/the_matches" >
@@ -103,7 +105,7 @@ export class Header extends Component {
                                     Matches
                                 </Button>
                             </Link>
-                            <Link to="/the_matches" >
+                            <Link to="/the_players" >
                                 <Button color="inherit" style={{ ...ToolBarStyling }}>
                                     The Players
                                 </Button>

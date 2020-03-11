@@ -1,20 +1,25 @@
 import React from 'react'
-import  HeatLogo  from '../ReusableUI/Icons'
+import HeatLogo from '../ReusableUI/Icons'
+import heatLogo from '../../Resources/images/logos/heatThree.png';
+import Miscellaneous from '../ReusableUI/miscellaneous';
+import facebook from '../../Resources/images/logos/socialMedia/facebook.png'
 
 const Footer = () => {
     return (
         <footer className="footer_bck">
             <div className="footer_logo">
-                <HeatLogo 
-                    width="70px"
-                    height="70px"
+                <HeatLogo
+                    width="120px"
+                    height="120px"
                     link={true}
                     linkTo="/"
+                    url={heatLogo}
                 />
+                <div className="footer_discl">
+                    Jovan's Heat Blog 2020. All rights reserverd.
+                </div>
             </div>
-            <div className="footer_discl">
-                Miami Heat 2020. All rights reserverd.
-            </div>
+          
         </footer>
     )
 }

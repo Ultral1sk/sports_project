@@ -132,7 +132,7 @@ class AddEditMatch extends Component {
                     options: [
                         {key:'W',value:'W'},
                         {key:'L',value:'L'},
-                        {key:'D',value:'D'},
+                        {key:'OT',value:'OT'},
                         {key:'n/a',value:'n/a'}
                     ]
                 },

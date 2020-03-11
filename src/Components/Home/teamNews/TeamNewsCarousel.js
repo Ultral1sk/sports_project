@@ -7,8 +7,8 @@ import CarouselCard from './CarouselCard'
 import imgOne from '../../../Resources/images/players/heat/newsImages/butler1.jpg'
 import imgTwo from '../../../Resources/images/players/heat/newsImages/derrick.jpg'
 import imgThree from '../../../Resources/images/players/heat/newsImages/derrick1.jpg'
-import imgFour from '../../../Resources/images/players/heat/newsImages/derrick1.jpg'
-import imgFive from '../../../Resources/images/players/heat/newsImages/derrick1.jpg'
+
+import imgFour from '../../../Resources/images/players/heat/newsImages/butler.jpg'
 
 class TeamNewsCarousel extends React.Component {
   constructor(props) {
@@ -31,6 +31,7 @@ class TeamNewsCarousel extends React.Component {
         arrowLeft={<ArrowBackIosIcon  style={{ cursor: 'pointer' }} />}
         arrowRight={<ArrowForwardIosIcon  style={{ cursor: 'pointer' }} />}
         addArrowClickHandler
+        infinite
      
     >
       <CarouselCard key={1} bck={imgOne}   link={true} linkTo='/'  width="100%" height="50vh" />
