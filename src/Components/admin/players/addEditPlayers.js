@@ -8,7 +8,7 @@ import { validate } from '../../ReusableUI/miscellaneous'
 import Fileuploader from '../../ReusableUI/fileuploader'
 
 import { firebasePlayers, firebaseDB, firebase } from '../../../firebase';
-import { firebaseLooper } from '../../ReusableUI/miscellaneous'
+
 
 
 class AddEditPlayers extends Component {

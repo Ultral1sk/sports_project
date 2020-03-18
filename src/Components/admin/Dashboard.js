@@ -8,8 +8,7 @@ const Dashboard = () => {
         <AdminLayout>
             <div className="user_dashboard">
                 <div>
-                    This is osmetig
-
+                    <h3 style={{color: 'black'}}>Hello ADMIN</h3>
                 </div>
             </div>
         </AdminLayout>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PlayerCard from '../ReusableUI/playerCard'
 import Fade from 'react-reveal/Fade'
 import { firebasePlayers, firebase } from '../../firebase'
 import { firebaseLooper } from '../ReusableUI/miscellaneous'

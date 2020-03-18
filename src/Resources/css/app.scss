@@ -1,6 +1,9 @@
 @import '../../Components/Header_Footer/header.scss';
 @import '../../Components/Home/countdown/countdown.scss';
-@import '../../Components/Home/teamNews/teamNews.scss';
+@import '../../Components/Home/teamNewsHome/teamNews.scss';
+@import '../../Components/Home/teamNewsHome/teamNewsMain/RouteNews.scss';
+@import '../../Components/VideosComponent/video.scss';
+
 
 body {
     margin:0;
@@ -26,9 +29,7 @@ a {
    justify-content: space-evenly;
 }
 
-.footer_socialmedia_wrapper {
-    
-}
+
 
 .img_cover {
     background-size: cover !important;
@@ -76,7 +77,7 @@ button {
 }
 
 .success_label {
-    color: #98c5e9;
+    color: #8a0000;
     font-weight: 600;
     margin: 10px 0px;
 }
@@ -85,7 +86,8 @@ button {
     font-size: 20px;
     margin: 10px 0px;
     font-weight: 300;
-    background: #e5f4ff;
+    background: #8a0000;
+    color : #ffffff;
     padding: 10px;
     display: inline-block;
 }
@@ -313,14 +315,17 @@ footer .footer_discl {
     border-bottom: 2px solid #dddddd;
     padding: 20px;
     box-sizing: border-box;
-    height: 143px;
+    height: 153px;
     clear: both;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .match_box_big .block_wraper {
     display: inline-block;
-    margin-right: 50px;
-    float: left;
+    margin-right: 100px;
+   
 }
 
 .match_box_big .block {
@@ -338,7 +343,7 @@ footer .footer_discl {
 .match_box_big .block .result {
     font-size: 21px;
     line-height: 51px;
-    margin-left: 18px;
+    margin-left: 20px;
     font-weight: 300;
 }
 
@@ -348,6 +353,7 @@ footer .footer_discl {
 
 .block_wraper.nfo {
     border-left: 1px solid #dddddd;
+  
     height: 102px;
     padding: 15px 0 0 20px;
     font-weight: 300;
@@ -588,8 +594,9 @@ footer .footer_discl {
 
 .admin_container .admin_left_nav {
     min-height: 100vh;
-    background: #282828;
+    background: black;
     border-right: 2px solid #dddddd;
+    
 }
 
 .admin_container  .admin_right {
@@ -612,7 +619,7 @@ footer .footer_discl {
 }
 
 .admin_container h2 {
-    margin: 0px 0px 50px 0px;
+    margin: 50px 0px 50px 0px;
     border-bottom: 1px solid #dbdbdb;
     color: #414141;
     font-size: 40px;
@@ -621,6 +628,7 @@ footer .footer_discl {
 .editmatch_dialog_wrapper,
 .editplayers_dialog_wrapper {
     padding: 20px;
+
     width: 480px;
 }
 
@@ -637,7 +645,7 @@ footer .footer_discl {
 .select_team_layout input[name=result_away_input] {
     width: 60px;
     text-align: center;
-    background: #98c6e9;
+    background: #8a0000;
     color: #ffffff;
 }
 

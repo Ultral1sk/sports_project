@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from './HOC/Layout'
-import { Switch , Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 
 import PrivateRoute from './Components/authRoutes/privateRoutes'
 import PublicRoute from './Components/authRoutes/publicRoutes'
@@ -17,7 +17,8 @@ import AdminPlayers from './Components/admin/players/index'
 import AddEditPlayers from './Components/admin/players/addEditPlayers'
 import ThePlayers from './Components/thePlayers/index'
 import TheMatches from './Components/theMatches/'
-
+import NewsMain from '../src/Components/Home/teamNewsHome/teamNewsMain/index'
+import VideosCarrier from './Components/VideosComponent/'
 
 
 // this is in this case the App component
@@ -36,8 +37,9 @@ const Routes = (props) => {
                     <PublicRoute  {...props} restricted={true}                      path='/sign_in' exact component={SignIn} />
                     {/*  if the user is signed in they will not be able to acces the sign_in component they will be redirected directly to the dashboard    */}
                     <PublicRoute  {...props} restricted={false}                     path='/the_matches' exact component={TheMatches} />
-                   
+                    <PublicRoute  {...props} restricted={false}                     path='/the_videos' exact component={VideosCarrier} />
 
+                    <PublicRoute  {...props} restricted={false}                     path='/team_news' exact component={NewsMain} />
                     <PublicRoute  {...props}                                        path='/the_players' exact component={ThePlayers} />
                     {/* if the boolena is false the home route can be accessed by anyone */}
                     <PublicRoute  {...props} restricted={false}                     path='/' exact component={Home} />

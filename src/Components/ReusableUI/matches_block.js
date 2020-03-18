@@ -1,4 +1,6 @@
 import React from 'react'
+import Carousel from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 
 const MatchesBlock = ({ match }) => {
 
@@ -6,6 +8,7 @@ const MatchesBlock = ({ match }) => {
     
 
     return (
+   
         <div className="match_block">
             <div className="match_date">
                 {match.final ? match.date : `Match not played yet : ${match.date}`}
@@ -31,6 +34,7 @@ const MatchesBlock = ({ match }) => {
                 </div>
             </div>
         </div>
+
     )
 }
 

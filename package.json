@@ -25,6 +25,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "3.3.1",
     "react-video-cover": "^1.2.2",
+    "react-youtube": "^7.9.0",
     "redux": "^4.0.5",
     "video-react": "^0.14.1"
   },

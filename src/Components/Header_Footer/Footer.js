@@ -1,8 +1,7 @@
 import React from 'react'
 import HeatLogo from '../ReusableUI/Icons'
 import heatLogo from '../../Resources/images/logos/heatThree.png';
-import Miscellaneous from '../ReusableUI/miscellaneous';
-import facebook from '../../Resources/images/logos/socialMedia/facebook.png'
+
 
 const Footer = () => {
     return (

@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import HeatLogo from '../ReusableUI/Icons'
 import heatLogo from '../../Resources/images/logos/heatThree.png'
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -34,7 +35,7 @@ export class Header extends Component {
       this.state = {
          // current position
          pos: window.pageYOffset,
-         visible: false
+         visible: true
       };
    }
    componentDidMount    = () =>  window.addEventListener("scroll", this.handleScroll);
@@ -42,12 +43,12 @@ export class Header extends Component {
    
    // Hide or show the menu.
    handleScroll = () => {
-      const { pos } = this.state;
+    
       const temp = window.pageYOffset;
       // updated position
 
-      if( temp > 100 ) this.setState({ visible : this.state.visible = true})
-      else             this.setState({ visible : this.state.visible = false})
+      if( temp > 50 ) this.setState(state => ({ visible : state.visible = false  })) 
+      else           this.setState(state => ({ visible : state.visible = true  }))  
       
       this.setState({ pos: temp});
       
@@ -62,8 +63,9 @@ export class Header extends Component {
                     
                     style={{ ...AppBarStyling }}
                 >
-             
-                    <Toolbar className={this.state.visible ? "ToolbarLogoStylingOff" : "ToolbarLogoStylingOn"}>
+
+                    <Fade when={this.state.visible} collapse>        
+                    <Toolbar className="Toolbar">
                         <div className="header_wrapper">
                             <div className="header_inner_wrapper">
                                 <h2>HEAT</h2>
@@ -82,9 +84,9 @@ export class Header extends Component {
                                 <span>2019 - 2020 season</span>
                             </div>
                         </div> 
-
                     </Toolbar>
-                    <Toolbar style={{ display: 'flex', height: '100%', padding: '0', margin: '0'}}>
+                    </Fade>
+                    <Toolbar style={{ display: 'flex', height: '80%', padding: '0', margin: '0'}}>
                         <div style={{ flexGrow: 1, width: '200px', height: '65px'}}>
                         {this.state.visible ?
                            <Link to="/" onClick={() => window.location.reload()}>
@@ -111,9 +113,9 @@ export class Header extends Component {
                                 </Button>
                             </Link>
                            
-                            <Link to="/the_matches" >
+                            <Link to="/the_videos" >
                                 <Button color="inherit" style={{ ...ToolBarStyling }}>
-                                    Video
+                                    Videos
                                 </Button>
                             </Link>
                             <Link to="/the_matches" >

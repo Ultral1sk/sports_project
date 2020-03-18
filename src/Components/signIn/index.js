@@ -121,7 +121,7 @@ class SignIn extends Component {
     render() {
         return (
             <div className="container">
-                <div className="signin_wrapper" style={{ margin: '100px' }}>
+                <div className="signin_wrapper" style={{ marginTop: '20rem' }}>
                     <form onSubmit={(event) => this.submitForm(event)}>
                         <FormField
                             id={'email'}

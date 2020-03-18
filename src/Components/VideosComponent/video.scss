@@ -1,0 +1,29 @@
+.youtube_background_container {
+    .backgroundColorContainer { background-color: black; width: 100vw; height: 100vh;}
+    background : url('../../Resources/images/wade.jpg') center right no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    margin-top: 10rem;
+}
+
+.text_container {
+    width: 100%;
+    height: 100vh;
+}
+
+.miami_text{
+ 
+    background: url(../../Resources/images/miami.png) center center no-repeat;
+    background-position: 100% 50%;
+    width: 50vw;
+    height: 20vh;
+}
+
+.heat_text{
+    background: url(../../Resources/images/heat.png) center center no-repeat;
+    background-position: 100% 50%;
+    width: 60vw;
+    height: 30vh;
+}
