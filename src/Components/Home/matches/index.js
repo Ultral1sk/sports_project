@@ -15,17 +15,17 @@ const MatchesHome = () => {
                     Matches
                 </MiscellaneousTag>
                 <Blocks />
-                <div style={{ textAlign: 'center' }}>
+                <div style={{ textAlign: 'center', paddingTop : '5rem' }}>
 
                     <MiscellaneousTag
                         bck="rgb(138, 0, 0)"
-                        size="45px"
+                        size="30px"
                         color="white"
                         link={true}
                         linkTo='/the_matches'
                     >
 
-                        Click for more matches
+                        Matches
                 </MiscellaneousTag>
                 </div>
 

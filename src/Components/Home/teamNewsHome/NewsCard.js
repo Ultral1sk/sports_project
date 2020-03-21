@@ -21,9 +21,6 @@ class NewsCard extends Component {
                  </div> 
                  <div>
                      <TeamNewsCarousel />
-                     <div style={{textAlign : 'center'}}>
-                         <Link to="team_news" style={{padding : '1rem', background: '#8a0000', color: 'white'}}>More News</Link>
-                     </div>
                  </div>
 
               </div>  

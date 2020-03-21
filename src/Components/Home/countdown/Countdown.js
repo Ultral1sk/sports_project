@@ -14,7 +14,7 @@ class Countdown extends Component {
         super(props)
 
         this.state = {
-            deadline: 'Mar, 20, 2020',
+            deadline: 'Mar, 25, 2020',
             days: '0',
             hours: '0',
             minutes: '0',
@@ -73,7 +73,7 @@ class Countdown extends Component {
                                 <h2>Heat</h2>
                                 <div className="countdown_innertext">
                                     <h2 >VS</h2>
-                                    <h2 >Warriors</h2>
+                                    <h2 >TBA</h2>
                                 </div>
                             </div>
                         </div>

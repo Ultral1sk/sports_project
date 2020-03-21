@@ -32,6 +32,8 @@ class TeamNewsCarousel extends React.Component {
         arrowRight={<ArrowForwardIosIcon  style={{ cursor: 'pointer' }} />}
         addArrowClickHandler
         infinite
+        draggable={true} 
+
      
     >
       <CarouselCard key={1} bck={imgOne}   link={true} linkTo='/'  width="100%" height="50vh" />

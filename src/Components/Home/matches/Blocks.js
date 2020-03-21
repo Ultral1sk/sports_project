@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import '@brainhubeu/react-carousel/lib/style.css';
 import { firebaseMatches } from '../../../firebase';
 import { firebaseLooper, reverseArray } from '../../ReusableUI/miscellaneous';
 
