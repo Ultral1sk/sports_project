@@ -43,9 +43,9 @@ class LeagueTable extends Component {
                     <TableCell style={style.cell}>{i+1}</TableCell>
                     <TableCell style={style.cell}>{pos.team}</TableCell>
                     <TableCell numeric style={style.cell}>{pos.w}</TableCell>
-                    <TableCell numeric style={style.cell}>{pos.d}</TableCell>
                     <TableCell numeric style={style.cell}>{pos.l}</TableCell>
-                    <TableCell numeric style={style.cell}>{pos.pts}</TableCell>
+                    <TableCell numeric style={style.cell}>{pos.d}</TableCell>
+                    <TableCell numeric style={style.cell}>{pos.PPGame}</TableCell>
                 </TableRow>
             ))
             :null
@@ -59,7 +59,7 @@ class LeagueTable extends Component {
         return (
             <div className="league_table_wrapper">
                 <div className="title">
-                    League Table
+                    Eastern Conference Standings
                 </div>
                 <div style={{background: '#98c6e9'}}>
                 <Table>

@@ -52,13 +52,15 @@ class MatchesList extends Component {
             >
                 {
                     (nodes => (
-                        <div>
+                        <div >
                             {nodes.map(({ key, data, state: { x, opacity } }) => (
                                 <div
                                     key={key} className="match_box_big"
                                     style={{
                                         opacity,
-                                        transform: `translate(${x}px)`
+                                        transform: `translate(${x}px)`,
+                                        display : 'flex',
+                                        flexGrow : '1'
                                     }}
                                 >
                                     <div className="block_wraper">
@@ -78,13 +80,14 @@ class MatchesList extends Component {
                                             <div className="team">{data.away}</div>
                                             <div className="result">{data.resultAway}</div>
                                         </div>
-
                                     </div>
                                     <div className="block_wraper nfo">
                                         <div> <strong>Date : </strong>{data.date} </div>
                                         <div> <strong>Stadium : </strong>{data.stadium} </div>
                                         <div> <strong>Referee : </strong>{data.referee} </div>
+
                                     </div>
+                                  
 
                                 </div>
 
@@ -101,9 +104,9 @@ class MatchesList extends Component {
         // console.log(this.props);
 
         return (
-            <div>
+            <>
                 {this.showMatches()}
-            </div>
+            </>
         )
     }
 }

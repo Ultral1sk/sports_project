@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade'
+import PlayerCard from '../ReusableUI/playerCard'
 import { firebasePlayers, firebase } from '../../firebase'
 import { firebaseLooper } from '../ReusableUI/miscellaneous'
 import { Promise } from 'core-js'
@@ -62,6 +63,7 @@ class ThePlayers extends Component {
                             <div
                                 className="player_card_thmb"
                                 style={{ background: `url(${player.url})`, width: player.width, height: player.height }}
+                                
                             >
                                 <div className="player_card_number">
                                     {player.number}
@@ -72,9 +74,9 @@ class ThePlayers extends Component {
                                             <span>{player.name}</span><br />
                                             <span>{player.lastname}</span>
                                             <div className="playerd_card_abilities">
-                                                <span>{player.position}</span>
-                                                <span>{player.height}</span>
-                                                <span>{player.lbs}</span>
+                                                <span>{player.position} |</span>
+                                                <span>{player.height} |</span>
+                                                <span>{player.lbs} LBS.</span>
                                             </div>
                                         </div>
 
@@ -125,6 +127,7 @@ class ThePlayers extends Component {
 
                         <div className="team_category_wrapper">
                             <div className="title">Point Guard</div>
+
                             <div className="team_cards">
                                 {this.showplayersByCategory('Point Guard')}
                             </div>

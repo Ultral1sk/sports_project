@@ -1,76 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+            ** Miami Heat **
 
-## Available Scripts
+1 - Practice project a blog for my favorite basketball team
+It contains 2019 / 2020 season results from all the matches miami heat has played
+and also the eastern conference standings.
 
-In the project directory, you can run:
+2 - Data is comming out of firebase and the images 
 
-### `yarn start`
+3 - The website has also restrictions, the visitors can visit every page
+what they can't do is modify the page
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4 - The privileges are for administrator of the webpage so he can modify the results table
+update the news regarding the team and the current situation you can log in with this credidentials to check the administrator functions. 
+ /sign_in <USERNAME> theservicethe@gmail.com <PASSWORD>  123456
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-
-1   - installing packages
-2   - routes file where the routing will be done
-3   - creating layout file where the items are going to be displayed
-4   - starting with the project adding the header
-5   - creating a reusable component in this case the logo
-5.5 - creating the footer
+5 - The adminstrator can add new matches and add new players in the roster also modify them
+ 

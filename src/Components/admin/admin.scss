@@ -1,0 +1,72 @@
+/*=============================
+         ADMIN
+===============================*/
+
+.admin_container {
+    margin-top: 96px;
+    display:flex;
+    margin-top: 13rem;
+}
+
+.admin_container .admin_left_nav {
+    min-height: 100vh;
+    background: black;
+    border-right: 2px solid #dddddd;
+    
+}
+
+.admin_container  .admin_right {
+    flex-grow: 1;
+  
+}
+.admin_container  .admin_progress {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.admin_container .matches_tag_red {
+    font-weight: 700;
+    color: #F44336;
+}
+
+.admin_container .matches_tag_green {
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.admin_container h2 {
+    margin: 50px 0px 50px 0px;
+    border-bottom: 1px solid #dbdbdb;
+    color: #414141;
+    font-size: 40px;
+}
+
+.editmatch_dialog_wrapper,
+.editplayers_dialog_wrapper {
+    padding: 20px;
+
+    width: 480px;
+}
+
+ 
+.select_team_layout .wrapper{
+    display: flex;
+}
+
+.select_team_layout .wrapper .left {
+    flex-grow: 1;
+}
+
+.select_team_layout input[name=result_local_input],
+.select_team_layout input[name=result_away_input] {
+    width: 60px;
+    text-align: center;
+    background: #8a0000;
+    color: #ffffff;
+}
+
+.admin_submit button {
+    font-size: 20px;
+    margin: 40px 0px;
+    background: rgb(138, 0, 0);
+}

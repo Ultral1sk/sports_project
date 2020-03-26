@@ -25,7 +25,7 @@ export class Header extends Component {
 
         const temp = window.pageYOffset;
         // updated position
-        
+
         if (temp > 50) this.setState(state => ({ visible: state.visible = false }))
         else this.setState(state => ({ visible: state.visible = true }))
 
@@ -44,6 +44,7 @@ export class Header extends Component {
                         <Toolbar className="Toolbar">
                             <div className="header_wrapper">
                                 <div className="header_inner_wrapper">
+
                                     <h2>HEAT</h2>
                                     <HeatLogo
                                         link={true}
@@ -52,6 +53,7 @@ export class Header extends Component {
                                         height="110px"
                                         url={heatLogo}
                                     />
+
                                     <span>NATION</span>
                                 </div>
 
@@ -74,14 +76,15 @@ export class Header extends Component {
                                     Team News
                                 </Button>
                             </Link>
+
+                            <Link to="/team_players" >
+                                <Button color="inherit" style={{ ...ToolBarStyling }}>
+                                    Team Players
+                                </Button>
+                            </Link>
                             <Link to="/the_matches" >
                                 <Button color="inherit" style={{ ...ToolBarStyling }}>
                                     Matches
-                                </Button>
-                            </Link>
-                            <Link to="/the_players" >
-                                <Button color="inherit" style={{ ...ToolBarStyling }}>
-                                    The Players
                                 </Button>
                             </Link>
                             <Link to="/the_videos" >
@@ -89,17 +92,7 @@ export class Header extends Component {
                                     Videos
                                 </Button>
                             </Link>
-                            <Link to="/the_matches" >
-                                <Button color="inherit" style={{ ...ToolBarStyling }}>
-                                    Tickets
-                                </Button>
-                            </Link>
-                            <Link to="/the_matches" >
-                                <Button color="inherit" style={{ ...ToolBarStyling }}>
-                                    Store
-                                </Button>
-                            </Link>
-                            <Link to="/the_matches" >
+                            <Link to="/team_fans" >
                                 <Button color="inherit" style={{ ...ToolBarStyling }}>
                                     Fans
                             </Button>

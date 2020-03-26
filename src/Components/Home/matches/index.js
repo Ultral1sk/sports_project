@@ -14,19 +14,20 @@ const MatchesHome = () => {
                 >
                     Matches
                 </MiscellaneousTag>
-                <Blocks />
-                <div style={{ textAlign: 'center', paddingTop : '5rem' }}>
-
-                    <MiscellaneousTag
-                        bck="rgb(138, 0, 0)"
+                <h2>All matches are postponed because of the COVID-19 pendemic, for more info click the    <MiscellaneousTag
+                    
                         size="30px"
-                        color="white"
+                        color="rgb(138, 0, 0)"
                         link={true}
                         linkTo='/the_matches'
                     >
 
-                        Matches
-                </MiscellaneousTag>
+                        link
+                </MiscellaneousTag></h2>
+                <Blocks />
+                <div style={{ textAlign: 'center', paddingTop : '5rem' }}>
+
+                 
                 </div>
 
             </div>
