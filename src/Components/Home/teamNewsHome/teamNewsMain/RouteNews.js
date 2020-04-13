@@ -3,10 +3,10 @@ import React from 'react'
 const RouteNews = () => {
     return (
         <>
-            <div className="HomeRoute_main_container"></div>
+           
             <div className="routenews_outer_wrapper">
                 <div>
-                    <h2 className="news_header">HEAT NEWS</h2>
+                    <h2 id="news_header" >HEAT NEWS</h2>
                 </div>
                 <div className="routenews_inner_wrapper">
 

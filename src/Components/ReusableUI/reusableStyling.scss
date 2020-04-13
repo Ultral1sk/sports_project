@@ -2,228 +2,181 @@
             MATCHES BLOCK
 ===============================*/
 
-.match_block .match_date{
-    color:#ffffff;
-    font-size:18px;
-}
 
-.match_block .match_wrapper .match_top,
-.match_block .match_wrapper .match_bottom {
-    display: flex;
-}
-.match_block .match_wrapper .match_bottom {
-    margin-top: 5px;
-}
+@media screen and (min-width: 375px) {
+    .match_block .match_date{ color:#ffffff; font-size:18px; }
+    
+    .match_block .match_wrapper .match_top,
+    .match_block .match_wrapper .match_bottom { display: flex; }
+    .match_block .match_wrapper .match_bottom { margin-top: 5px;}
+    
+    .match_block .match_wrapper .match_top .left,
+    .match_block .match_wrapper .match_bottom .left {
+        background: #ffffff; font-family: 'Righteous', cursive; flex-grow: 1; margin-right: 5px;}
+    
+    .match_block .match_wrapper .match_top .left div,
+    .match_block .match_wrapper .match_bottom .left div {
+        float:left
+    }
+    
+    .match_block .match_wrapper .match_top .left .icon,
+    .match_block .match_wrapper .match_bottom .left .icon {
+        width: 50px; height: 50px; background-size: cover !important;
+    }
+    .match_block .match_wrapper .match_top .left .team_name,
+    .match_block .match_wrapper .match_bottom .left .team_name {
+        font-size: 20px;
+       
+    }
+    
+    
+    .match_block .match_wrapper .match_top .right,
+    .match_block .match_wrapper .match_bottom .right { 
+        background: rgb(138, 0, 0); width: 30px; height: 30px; color: #ffffff; font-size: 40px; text-align: center; padding: 15px;
+    } 
+    
+    .match_box_big { width: 100%; border: 2px solid #dddddd; padding: 20px; box-sizing: border-box; height: 153px; display: block; flex-grow: 1; justify-content: space-between;}
+    
+    .match_box_big .block_wraper {display: inline-block;}
+    
+    .match_box_big .block { display: flex; }
+    
+    .match_box_big .icon{ width: 50px; height: 50px; background-size: cover !important; background-position: center; }
+    
+    .match_box_big .block .team,
+    .match_box_big .block .result {
+        font-size: 21px; line-height: 51px; margin-left: 20px; font-weight: 300;
+    }
+    
+    .match_box_big .block .result {font-weight: 500; }
+    
+    .block_wraper.nfo { border-left: 1px solid #dddddd; width: 20%; height: 102px; padding: 15px 0 0 20px; font-size: 3vw; font-weight: 300; color: #5e5e5e; }
+    
+    .block_wraper.nfo div { margin: 5px 0px; }
+    
+    .match_filters { margin-top: 8rem; display: flex; border-bottom: 1px solid #dddddd; background: #6b6b6b;
+    }
+    .match_filters .tag {font-weight: 300;margin-bottom: 5px;color: #656565;
+    }
+    .match_filters .option { background: #ffffff; padding: 5px 9px; border-radius: 3px; font-size: 13px; margin-right: 5px; cursor: pointer;
+    }
+    
+    .match_filters .option.active { background: #d36262; color: #fff;
+    }
+    
+    .match_filters_box { padding: 10px 10px; border-right: 1px solid #dddddd; background: #6b6b6b;
+    }
+    
+    .match_filters .cont { display: flex;
+      
+    }
 
-.match_block .match_wrapper .match_top .left,
-.match_block .match_wrapper .match_bottom .left {
-    background: #ffffff; 
-    font-family: 'Righteous', cursive;
-    flex-grow: 1;
-    margin-right: 5px;
-    padding: 10px;
-}
 
-.match_block .match_wrapper .match_top .left div,
-.match_block .match_wrapper .match_bottom .left div {
-    float:left
-}
+    .player_card_wrapper { position: relative; width: 100%; display: flex; font-family: 'Righteous', cursive; margin-top: 3rem;
+    
+    }
+    .player_card_wrapper .player_card_thmb { position: relative; width:80%; height:90vh; background-repeat: no-repeat !important; background-position: center !important;  background-size: contain !important; }
+    
+    .player_card_wrapper .player_card_nfo { text-align: end; width: 100%; padding-left: 10%;}
 
-.match_block .match_wrapper .match_top .left .icon,
-.match_block .match_wrapper .match_bottom .left .icon {
-    width: 50px;
-    height: 50px;
-    background-size: cover !important;
-}
-.match_block .match_wrapper .match_top .left .team_name,
-.match_block .match_wrapper .match_bottom .left .team_name {
-    font-size: 30px;
-    padding: 6px 10px;
-}
+    .player_card_wrapper .player_card_number { position: absolute; z-index: -1; top: 120px; left: 20px; color: rgb(138, 0, 0); font-size: 150px; text-align: right; line-height: 160px;
+    }
+    
+    .playerd_card_abilities {font-size: 3vw;text-align: end;span {    padding-left: 1rem;}}
+    .player_card_statistics { padding-top: 3rem; font-size: 5vw;
+     span {     padding-left:1.5rem; }}
 
+    .player_card_about { float: right; width: 100%; margin-top: 6rem; font-size: 3vw; }
+    
+    
+    .player_card_wrapper .player_card_name  {  display: block; font-size: 16vw; text-transform: uppercase; color: #050505 }
+    
+    .home_card_button {  width: 86%;  text-align: end;  position: absolute; }
+    
+    
 
-.match_block .match_wrapper .match_top .right,
-.match_block .match_wrapper .match_bottom .right { 
-    background: rgb(138, 0, 0);
-    width: 70px;
-    color: #ffffff;
-    font-size: 50px;
-    text-align: center;
-    padding-top: 6px;
-} 
-
-.match_box_big {
-    width: 100%;
-    border: 2px solid #dddddd;
-    padding: 20px;
-    box-sizing: border-box;
-    height: 153px;    
-    display: block;
-    flex-grow: 1;
-    justify-content: space-between;
-
-}
-
-.match_box_big .block_wraper {
-    display: inline-block;
+  }
   
-   
-}
-
-.match_box_big .block {
-    display: flex;
-}
-
-.match_box_big .icon{
-    width: 80px;
-    height: 56px;
-    background-size: cover !important;
-    background-position: center;
-}
-
-.match_box_big .block .team,
-.match_box_big .block .result {
-    font-size: 21px;
-    line-height: 51px;
-    margin-left: 20px;
-    font-weight: 300;
-}
-
-.match_box_big .block .result {
-    font-weight: 500;
-}
-
-.block_wraper.nfo {
-    border-left: 1px solid #dddddd; 
-    height: 102px;
-    padding: 15px 0 0 20px;
-    font-weight: 300;
-    color: #5e5e5e;
-}
-
-.block_wraper.nfo div {
-    margin: 5px 0px;
-}
-
-.match_filters {
-     margin-top: 7.5rem;
-     display: flex;
-     border-bottom: 1px solid #dddddd;
-     background: #6b6b6b;
-}
-.match_filters .tag {
-    font-weight: 300;
-    margin-bottom: 5px;
-    color: #656565;
-}
-.match_filters .option {
-    background: #ffffff;
-    padding: 5px 9px;
-    border-radius: 3px;
-    font-size: 13px;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.match_filters .option.active {
-    background: #d36262;
-    color: #fff;
-}
-
-.match_filters_box {
-    padding: 10px 20px;
-    border-right: 1px solid #dddddd;
-    background: #6b6b6b;
-}
-
-.match_filters .cont {
-    display: flex;
   
-}
 
 
 /*=============================
-            MATCHES BLOCK
+          MEDIA QUERRY 768
 ===============================*/
 
-
-
-
-/*=============================
-            PLAYER CARD
-===============================*/
-
-
-
-.player_card_wrapper {
-    position: relative;
-    width: 100%;
-    display: flex;
-    font-family: 'Righteous', cursive;
-    margin-top: 3rem;
-
-}
-.player_card_wrapper .player_card_thmb {
-    position: relative;
-    width:80%;
-    height:90vh;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: contain !important;
-}
-
-.player_card_wrapper .player_card_nfo {
-    text-align: end;
-    width: 100%;
-    padding-left: 10%;
-  
+@media screen and (min-width: 768px) {
+    .player_card_wrapper .player_card_nfo {   text-align: end;   width: 100%;   padding-left: 10%; }
+    .player_card_wrapper .player_card_number { position: absolute; z-index: -1; top: 280px; left: 40px; color: rgb(138, 0, 0); font-size: 150px; text-align: right; line-height: 160px; }
     
-}
-.player_card_wrapper .player_card_number {
-    position: absolute;
-    z-index: -1;
-    top: 100px;
-    left: 120px;
-    color: rgb(138, 0, 0);
-    font-size: 400px;
-    text-align: right;
-    line-height: 160px;
-}
-
-.playerd_card_abilities {
-    font-size: 20px;
-    text-align: end;
-
-    span {
-        padding-left: 3rem;
+    .playerd_card_abilities { font-size: 3vw; text-align: end;
+        span { padding-left: 1rem; }
+       
     }
+    .player_card_statistics {  padding-top: 3rem;  font-size: 3.5vw;
+        span {padding-left:1.5rem; } 
+    }
+    .player_card_about {  float: right;  width: 100%;  margin-top: 10rem;  font-size: 2vw;
+    }
+    
+    .player_card_wrapper .player_card_name  {   display: block;  font-size: 14vw;  text-transform: uppercase;  color: #050505;
+    }
+
+    .block_wraper.nfo { font-size: 1.3vw !important; font-weight: 300; color: #5e5e5e; }
+
+    .home_card_button {  width: 86%;  text-align: end;  position: absolute;   
+
+        @media screen and (min-height: 1024px) {
+           .BrainhubCarouselItem {
+               padding : 0 !important;
+           }  
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
    
-}
-.player_card_statistics {
-    padding-top: 3rem;
-    font-size: 3rem;
-
-    span {
-        padding-left: 3rem;
-    }
-}
-.player_card_about {
-    float: right;
-    width: 40%;
-}
-
-
-.player_card_wrapper .player_card_name  { 
-    display: block;
-    font-size: 100px;
-    text-transform: uppercase;
-    color: #050505;
-}
-
-.home_card_button {
-    width: 80%;
-    text-align: end;
-    position: absolute;
+    .player_card_wrapper .player_card_nfo {   text-align: end;   width: 100%;   padding-left: 10%; }
+    .player_card_wrapper .player_card_number {top: 120px; left: 150px; font-size: 350px; text-align: right; line-height: 160px; }
     
-}
+    .playerd_card_abilities { font-size: 3vw; text-align: end;
+        span { padding-left: 1rem; }
+       
+    }
+    .player_card_statistics {  padding-top: 3rem;  font-size: 3vw;
+        span {padding-left:1.5rem; } 
+    }
+    .player_card_about {  z-index: 999; float: right;  width: 40%; padding-top: 1rem; margin-top: 0rem !important;  font-size: 2vw;
+    }
+    
+    .player_card_wrapper .player_card_name  {   display: block;  font-size: 7vw;  text-transform: uppercase;  color: #050505;
+    }
 
+
+    .home_card_button {  width: 88%; padding-top: 2rem;  text-align: end;  position: absolute;   
+
+    }
+    .block_wraper.nfo { font-size: 1.3vw !important; font-weight: 300; color: #5e5e5e; }
+
+    .match_block .match_wrapper .match_top .left .icon,
+    .match_block .match_wrapper .match_bottom .left .icon {
+        width: 80px !important; height: 80px !important; background-size: cover !important;
+    }
+    .match_block .match_wrapper .match_top .left .team_name,
+    .match_block .match_wrapper .match_bottom .left .team_name {
+        font-size: 35px !important ; padding: 1rem 3rem;
+       
+    }
+    .match_filters { margin-top: 0rem !important; }
+    }
+
+
+ @media screen and (min-width: 1680px) {
+    #news_header { padding-left: 6rem !important;}
+    .playerd_card_abilities { font-size: 1.5vw; text-align: end; }
+    .player_card_statistics {  padding-top: 3rem;  font-size: 1.5vw;}
+    .player_card_wrapper .player_card_number {top: 120px; left: 150px; font-size: 550px; }
+    .player_card_about {  width: 40%;font-size: 1vw; }
+
+    .block_wraper.nfo { font-size: 1vw !important; font-weight: 300; color: #5e5e5e; }
+
+ }

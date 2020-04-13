@@ -9,8 +9,8 @@ const Video = () => {
     // access to player in all event handlers via event.target
     const videoOnReady = (event) => { event.target.pauseVideo(); }
     const opts = {
-        height: '350',
-        width: '440',
+        height: '100%',
+        width: '100%',
         playerVars: {
             host: `${window.location.href}//www.youtube.com`,
             autoplay: 0,
@@ -23,7 +23,7 @@ const Video = () => {
     return (
         <>
             {/* container to create space */}
-            <div style={{ backgroundColor: 'black', height: '30vh', width: '100%' }}></div>
+            <div style={{ backgroundColor: 'black', height: '20vh', width: '100%' }}></div>
             {/* container to create space */}
             <div className="youtube_background_container">
                 <div className="text_container"><VideoText /></div>

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "build",
+    "public": "build/sports_project",
     "ignore": [
       "firebase.json",
       "**/.*",

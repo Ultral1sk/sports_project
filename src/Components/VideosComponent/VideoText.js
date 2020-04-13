@@ -26,15 +26,15 @@ const VideoText = () => {
     return (
         <>
             <div>
-                <Zoom when={showMiamiHeat} clear delay={500} duration={1500} collapse >
+                <Zoom when={showMiamiHeat} clear delay={300} duration={1200} collapse >
                     <div className="miami_text"></div>
                 </Zoom>
                 <Zoom when={showVideo} collapse clear >
-                    <div style={{ color: 'white', fontSize: '13vw', textAlign: 'center', width: "65%", paddingTop : '5rem'  }}>
+                    <div className="videosTxt">
                         <i>VIDEOS</i>
                     </div>
                 </Zoom>
-                <Zoom when={showMiamiHeat} clear delay={900} duration={1500} collapse >
+                <Zoom when={showMiamiHeat} clear delay={600} duration={1200} collapse >
                     <div className="heat_text"></div>
                 </Zoom>
             </div>

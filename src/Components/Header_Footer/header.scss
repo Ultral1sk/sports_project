@@ -1,30 +1,115 @@
-.header_inner_wrapper {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    h2   { font-size: 2.4vw; margin-bottom: 0; }
-    span { font-size: 2.4vw;  font-family: 'Nothing You Could Do'; padding-top : 2rem; }
+@media screen and (min-width: 375px) { 
+  .navbar   { width: 100%;z-index: 1;display: flex;justify-content: space-between;align-items: center;height: 140px;background: #000000;
    
+  
+    .logo a    {color: white; padding-top: 33px; display: flex; flex-direction: column; clear: both; padding-bottom: 30px; text-decoration: none; width: 98%;
+      
     
-}
-    
-.header_inner_span {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 1.5rem;
-    font-size: 80%;
+    }
+    .gray      { color : white; }
+    .fa-bars   { display: none; color: white; font-size: 3rem; }
+    nav        {
+      ul       { display: flex;   justify-content: space-between; }
+      li       { margin: 0 15px; list-style: none;  justify-content: space-between; font-size: 1em; color : white !important;   text-decoration: none; }
+      a        { font-size: 1em;   text-decoration: underline !important;   }
+   
+      
+    }
+  
+    @media only screen and (max-width: 800px) { padding: 0px;
+     
+      .logo     { width: 100%;  display: block; padding-left: 15px;   padding-top: 0px !important;}
+       li       { color : white; }
+    }
+    @media only screen and (max-width: 800px) { position: absolute; top : 0; height: auto; min-height: 50px; display: block;
+   
+      .logo     { width: 100%;  display: block; margin: 0px;   margin-left: -5px;
+        a       { padding: 20px 0px; }
+      }
+      .fa-bars  { display: inline-block; position: absolute; top: 30px; right: 20px; cursor: pointer; }
+      ul.collapsed { width: 100%; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-wrap: wrap; padding : 0; background-color: black;
+        
+        overflow: hidden; max-height: 0;
+        -moz-transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        -o-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+        -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+        -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  
+        &.is-expanded {
+          
+        a li { color  : white !important;}
+          overflow: hidden;
+          max-height: 550px; /* approximate max height */
+          -moz-transition-duration: 0.4s;
+          -webkit-transition-duration: 0.4s;
+          -o-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          -moz-transition-timing-function: ease-in;
+          -webkit-transition-timing-function: ease-in;
+          -o-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+        }
+        li {padding: 15px 10px;margin: 0px 0px;width: 100%;color : white;list-style: none; }
+        a { color : white;   text-decoration: underline;  }
+      }
+    }
+  }
+
+  @media screen and (min-height: 812px) {
+    &.is-expanded { max-height: 667px !important;}
+  }
+
+  @media screen and (min-height: 1024px) {
+    &.is-expanded { max-height: 880px !important;}
+    li {padding: 15px 10px !important; font-size: 4vw !important;}
+
+  }
+
+  
+
 }
 
 
-.Toolbar  { display: flex; justify-content: center;  align-items : center; }
-.ToolbarLogoStylingOff { display: none !important; }
+@media screen and (min-width: 414px) { 
+    .navbar {   
+      @media only screen and (max-width: 800px) {      
+        ul.collapsed {
+          &.is-expanded {  
+            a li { color  : white !important;}
+              max-height: 600px; /* approximate max height */     
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    @media screen and (min-height: 1366px) {
+    .navbar   {  position: absolute;top : 0;width: 100%;z-index: 1;display: flex;justify-content: space-between;align-items: center;height: 140px;background: #000000;
+   
+      nav        {
+        color : white;
+        li       {  margin: 0 15px; list-style : none;  justify-content: space-between; font-size: 3em !important;    }
+        a        { font-size: 0.5em; color: white !important;    .active {color: tomato;}}
+        a.active { color: rgb(255, 255, 255) !important; }
+        
+      }
+    }
+    }
+
+  }
 
 
 /*=============================
             HEADER FOOTER
 ===============================*/
+.footer_bck {
+  background-color: black;
+}
 
 footer {
     text-align: center;
@@ -40,3 +125,5 @@ footer .img_cover{
 footer .footer_discl {
     margin: 10px 0px;
 }
+
+

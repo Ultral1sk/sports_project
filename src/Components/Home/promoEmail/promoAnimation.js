@@ -22,7 +22,7 @@ const PromoAnimation = () => {
                 </div>
             </div><div className="right">
                 <Zoom>
-                    <div style={{ background: `url(${Jersey})` }}></div>
+                    <div className="enroll_jersey_bck" style={{ background: `url(${Jersey})` }}></div>
                 </Zoom>
             </div>
 

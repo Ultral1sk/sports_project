@@ -2,35 +2,64 @@
          THE MATCHES
 ===============================*/
 
-.the_matches_container {
-    margin-top: 96px;
+
+
+
+@media screen and (min-width: 375px) {
+    .the_matches_container {
+   
+    }
+    
+    .the_matches_wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .the_matches_wrapper .left {
+        flex-grow: 1;
+    }
+    
+    .the_matches_wrapper .right {
+       width:100%;
+    }
+    
+    .league_table_wrapper {
+    
+        border-left: 1px solid #dddddd;
+    }
+    .league_table_wrapper .title {
+        padding: 22px;
+        font-size: 22px;
+        color: #ffffff;
+        background: #6b6b6b;
+        border-bottom: 1px solid #dddddd;
+    }
+    
+    .the_matches_wrapper .progress {
+        text-align: center;
+        padding: 60px 0px;
+    }
+
+  
 }
 
-.the_matches_wrapper {
-    display: flex;
-}
+@media screen and (min-width: 1280px) {
+    
+    
+    .the_matches_wrapper {
+        display: flex;
+        flex-direction: row !important;
+    }
+    
+    .the_matches_wrapper .left {
+        flex-grow: 1;
+    }
+    
+    .the_matches_wrapper .right {
+       width:400px;
+    }
+    
+   
+   
 
-.the_matches_wrapper .left {
-    flex-grow: 1;
-}
-
-.the_matches_wrapper .right {
-   width:400px;
-}
-
-.league_table_wrapper {
-    margin-top: 7.45rem;
-    border-left: 1px solid #dddddd;
-}
-.league_table_wrapper .title {
-    padding: 22px;
-    font-size: 22px;
-    color: #ffffff;
-    background: #6b6b6b;
-    border-bottom: 1px solid #dddddd;
-}
-
-.the_matches_wrapper .progress {
-    text-align: center;
-    padding: 60px 0px;
 }

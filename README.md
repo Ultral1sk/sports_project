@@ -15,3 +15,4 @@ update the news regarding the team and the current situation you can log in with
 
 5 - The adminstrator can add new matches and add new players in the roster also modify them
  
+6 - You can send an email and participate into the jersey lottery the mail will go directly to firebase.

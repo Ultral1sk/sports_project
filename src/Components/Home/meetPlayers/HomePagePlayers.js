@@ -31,7 +31,7 @@ class HomePlayerCards extends Component {
                 }}
             >
                 <div className="home_meetplayers"
-                    style={{ background: ` url(${''})`, width: '98vw', height: '110vh' }}
+                    style={{ height: '110vh' }}
                 >
                     <div >
                         <div className="home_meetplayers_wrapper">
@@ -44,6 +44,7 @@ class HomePlayerCards extends Component {
                                     >
 
                                         <PlayerCard
+                                        
                                             key={1}
                                             show={this.state.show}
                                             number="30"

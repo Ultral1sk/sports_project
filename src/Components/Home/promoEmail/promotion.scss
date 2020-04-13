@@ -2,58 +2,61 @@
          PROMOTION
 ===============================*/
 
-.promotion_wrapper {
-    padding: 30px 0px 130px 0px;
+
+@media screen and (min-width: 375px) {
+    .promotion_wrapper {padding: 30px 0px 130px 0px;
+    }
+    .promotion_wrapper .promotion_animation {display: flex;padding: 80px 0px 30px 0px;
+    }
+    .promotion_wrapper .promotion_animation .left { text-transform: uppercase;text-transform: uppercase;font-size: 50px;font-family: 'Righteous', cursive;flex-grow: 1;color:#4e4e4e;line-height: 55px;padding-top: 2rem;
+    }
+    .promotion_wrapper .promotion_animation .left span {display:block; padding-left: 1rem;
+    }
+    .promotion_wrapper .promotion_animation .right {line-height: 135px;
+    }
+    .promotion_wrapper .promotion_animation .right div{width: 180px;height: 180px;background-size: contain !important;
+    }
+    .promotion_wrapper .enroll_wrapper {text-align: center;
+    }
+    .promotion_wrapper .enroll_title {font-family: 'Righteous', cursive;font-size: 26px;color: #4e4e4e;
+    }
+    .promotion_wrapper .enroll_discl {font-weight: 300;font-size: 12px;width: 271px;margin: 0 auto;padding: 10px 0px;
+    }
+    .promotion_wrapper .enroll_input {width: 330px;margin: 0 auto;padding: 10px 0px;
+    }
+
+   
+
+    
 }
 
-.promotion_wrapper .promotion_animation {
-    display: flex;
-    padding: 80px 0px 30px 0px;
+@media screen and (min-width: 768px) {
+    .promotion_wrapper {position: relative;
+    }
+
+
+    .promotion_wrapper .promotion_animation {display: flex;padding: 80px 0px 30px 0px; }
+    .enroll_wrapper {position: absolute;top: 105px;left: 35%; }
+    .promotion_wrapper .promotion_animation .left {font-size: 70px; }
+
+    .promotion_wrapper .promotion_animation .left span {display:block;padding-left: 1rem; }
+
+    .promotion_wrapper .promotion_animation .right {line-height: 135px;padding-top: 1.5rem;}
+ 
+   
 }
 
-.promotion_wrapper .promotion_animation .left { 
-    text-transform: uppercase;
-    text-transform: uppercase;
-    font-size: 150px;
-    font-family: 'Righteous', cursive;
-    flex-grow: 1;
-    color:#4e4e4e;
-    line-height: 135px;
-}
-.promotion_wrapper .promotion_animation .left span {
-    display:block;
- }
 
-.promotion_wrapper .promotion_animation .right {
-    line-height: 135px;
+@media screen and (min-width: 1024px) {
+   
+    .promotion_wrapper .promotion_animation { display: flex; padding: 80px 0px 30px 0px; }
+
+    .promotion_wrapper .promotion_animation .right div{  width: 200px;  height: 200px;}
 }
 
-.promotion_wrapper .promotion_animation .right div{
-    width: 280px;
-    height: 280px;
-    background-size: contain !important;
-}
-
-.promotion_wrapper .enroll_wrapper {
-    text-align: center;
-}
-
-.promotion_wrapper .enroll_title {
-    font-family: 'Righteous', cursive;
-    font-size: 26px;
-    color: #4e4e4e;
-}
-
-.promotion_wrapper .enroll_discl {
-    font-weight: 300;
-    font-size: 12px;
-    width: 271px;
-    margin: 0 auto;
-    padding: 10px 0px;
-}
-
-.promotion_wrapper .enroll_input {
-    width: 330px;
-    margin: 0 auto;
-    padding: 10px 0px;
+@media screen and (min-width: 1680px) {
+    .promotion_wrapper .promotion_animation .left {font-size: 110px; }
+    .promotion_wrapper .promotion_animation .left span {padding-top: 3rem; }
+    .promotion_wrapper .promotion_animation .right div{  width: 300px;  height: 300px;}
+    .enroll_wrapper {position: relative !important; display : flex; }
 }

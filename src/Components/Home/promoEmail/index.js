@@ -6,7 +6,7 @@ import Enroll from './Enroll'
 const PromotinalEmail = () => {
     return (
         <div className="promotion_wrapper" style={{background : '#ffffff'}}>
-            <div className="container">
+            <div className="container-fluid" style={{position: 'relative'}}>
                 <PromotionalAnimation />
                 <Enroll />
             </div>

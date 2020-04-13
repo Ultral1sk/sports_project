@@ -76,8 +76,7 @@ class Countdown extends Component {
                                     <h2 >TBA</h2>
                                 </div>
                             </div>
-                        </div>
-                        <div className="countdown_bottom">
+                            <div className="countdown_bottom">
                             <div className="countdown_item">
                                 <div className="countdown_time">
                                     {this.state.days}
@@ -112,8 +111,10 @@ class Countdown extends Component {
                         </div>
                             </div>
                         </div>
+                        </div>
+                     
                         <div className="CountdownCard_wrapper">
-                            <h3 style={{ padding: '2rem 5rem' }}>Upcoming Games</h3>
+                            <h3  className="upcoming">Upcoming Games</h3>
                             <div className="newsCards_inside_wrapper">
                                 <div>
                                     <CountdownCard

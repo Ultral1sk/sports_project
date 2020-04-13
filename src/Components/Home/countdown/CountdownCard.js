@@ -1,21 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const cardStyles ={
-  
-    width: 345,
-    height: '100%',
-    textAlign: 'center'
-    
-
-};
 
 export default function CountdownCard(props) {
   
 
   return (
   
-        <div style={{...cardStyles}}>
+        <div className="cardStyles">
             <div className="card_date_wrapper">
               <span>{props.date}</span>
               <Link to="" style={{padding : '1rem'}}>{props.tickets}</Link>

@@ -5,7 +5,7 @@ import Blocks from './Blocks';
 const MatchesHome = () => {
     return (
         <div className="home_matches_wrapper">
-            <div className="container">
+            <div className="container-fluid" style={{ padding: '0.5rem'}}>
                 <MiscellaneousTag
                     color="black"
                     size="50px"
