@@ -1,63 +1,68 @@
-.HomeRoute_main_container {
-    background : url('../../../../Resources/images/players/heat/ShortMovie/nation.jpg') center center no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-}
-.routenews_outer_wrapper {  background-color: white; padding-top: 3rem; h2 { padding-left: 9.2rem;}}
-.routenews_inner_wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    margin-bottom : 1rem;
-}
+@media screen and (min-width: 375px)  {
 
-.routenewsLeftOne{
-    width: 31.5vw;
-    height: 40vh;
-    background : url('../../../../Resources/images/players/heat/newsImages/butler1.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-
-}
-
-
-.routenewsLeftTwo {
-    width: 31.5vw;
-    height: 40vh;
-    background : url('../../../../Resources/images/players/heat/newsImages/derrick1.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    justify-content: flex-end;
+    .HomeRoute_main_container { background : url('../../../../Resources/images/players/heat/ShortMovie/nation.jpg') center center no-repeat; background-size: cover; width: 100vw; height: 100vh;
+    }
+    .routenews_outer_wrapper {  background-color: white; padding-top: 3rem; text-align: center;}
+    //
+    .routenews_inner_wrapper { display: flex; flex-direction: column; width: 100%; justify-content: space-evenly; margin-bottom : 1rem; font-size: 3.5vw; padding: 2rem 0;h3 {margin-top: 0;}
+    }
+    //
+    .routenewsLeftOne{ width: 90%; margin: 0 auto; height: 40vh; background : url('../../../../Resources/images/players/heat/newsImages/butler1.jpg'); background-size: cover; background-position: center; color: white; display: flex; justify-content: flex-end;
+    
+    }
+    
+    
+    .routenewsLeftTwo { width: 90%; margin: 0 auto; height: 40vh; background : url('../../../../Resources/images/players/heat/newsImages/derrick1.jpg'); background-size: cover; background-position: center; color: white; display: flex; justify-content: flex-end;
+    }
+    
+    .routenewsLeftThree{ width: 90%; margin: 0 auto; height: 40vh; background : url('../../../../Resources/images/players/heat/newsImages/derrick.jpg'); background-size: cover; background-position: center; color: white; display: flex; justify-content: flex-end;
+    
+    }
+    #news_header { padding-bottom: 3rem; font-size: 7vw;}
+     
+    //
+    .routenewsRight{ width: 90%; margin: 0 auto; // width: 31.5vw; height: 40vh; text-align: start;
+      
+    
+        p {     padding : 1rem;     margin  : 0;
+        }
+    }
 }
 
-.routenewsLeftThree{
-    width: 31.5vw;
-    height: 40vh;
-    background : url('../../../../Resources/images/players/heat/newsImages/derrick.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    justify-content: flex-end;
 
-}
-.news_header { text-align: center ; padding-bottom: 5rem; font-size: 3vw;}
+@media screen and (min-width: 768px)  {
+    .routenews_outer_wrapper { text-align: center;    padding: 0px 10px; }
  
-.routenewsRight{
-   
-    width: 31.5vw;
-    height: 40vh;
-    text-align: start;
+
+}
+
+
+@media screen and (min-width: 1024px)  {
+    .routenews_inner_wrapper { display: flex; flex-direction: row !important; width: 100%; justify-content: space-evenly; margin-bottom : 1rem; font-size: 1.55vw; padding: 0rem 0;}
+
+    .routenewsRight{ width: 90%; margin: 0 auto; text-align: start; padding: 0px 10px;} // width: 31.5vw; height: 40vh; t;
+    @media screen and (min-height: 1366px)  { 
+        .routenews_inner_wrapper { font-size: 2vw !important; h3 { padding-left: 15px;}}}
+}
+
+@media screen and (min-width: 1280px)  {
+    .routenews_inner_wrapper { font-size: 1.37vw; padding: 0rem 0; h3 { padding-left: 15px;}}
   
 
-    p {
-        padding : 0;
-        margin  : 0;
-    }
+}
+@media screen and (min-width: 1366px)  {
+    .routenews_inner_wrapper { font-size: 1.25vw; padding: 0rem 0; h3 { padding-left: 15px;} }
+  
+
+}
+@media screen and (min-width: 1440px)  {
+    .routenews_inner_wrapper { font-size: 1.25vw; padding: 0rem 0; h3 { padding-left: 15px;} }
+  
+
+}
+
+@media screen and (min-width: 1680px)  {
+    .routenews_inner_wrapper { font-size: 0.75vw; padding: 1rem 0; width: 60%;  margin: 0 auto; h3 { padding-left: 15px;}}
+  
+
 }

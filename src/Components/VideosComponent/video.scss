@@ -120,6 +120,10 @@
      
     }
     .videosTxt { width: 80%;}
+    @media screen and (min-height: 1366px) {
+
+    .text_container { height: 35vh; padding-top: 5rem; }
+    }
   }
 
   @media screen and (min-width: 1280px) { 

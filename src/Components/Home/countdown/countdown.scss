@@ -19,7 +19,7 @@
     .CountdownCard_wrapper { top: 48.5%; left: 0%; width: 100%; }
     
     
-    .countdown_wrapper .countdown_bottom { width: 100%; padding-left: 5rem; display: flex; font-weight : 400;        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+    .countdown_wrapper .countdown_bottom { width: 100%; padding-left: 3.5rem; display: flex; font-weight : 400;        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
     
     .countdown_wrapper .countdown_time { color:#ffffff; font-size: 7vw; padding: 1.5rem 1rem; display: flex; }
     .countdown_wrapper .countdown_item:last-child .countdown_time{ border:none; }
@@ -39,14 +39,20 @@
     .scheduleButoon {text-align: center; height: 100px; margin-top: 3rem;
          a { padding : 1rem; background-color: #8a0000; }
     }
+
+    @media screen and (min-width: 375px) and ( min-height: 812px) {
+      .countdown_wrapper .countdown_bottom {width:100%; text-align: center !important;}
+
+    }
     
   }
   
   
+ 
 
   @media screen and (min-width: 414px) { 
     .videoFadingContainer { position: absolute; top: 0px; height: 19.4%; width: 100%; background-color: rgba(0, 0, 0, 0.37); }
-    .countdown_wrapper .countdown_bottom {width: 100%; padding : 1rem 3rem; display: flex; justify-content: center; font-weight : 400; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+    .countdown_wrapper .countdown_bottom {width: 100%; text-align: center; padding-top: 1rem; font-weight : 400; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
 
     .countdown_wrapper .countdown_time { color:#ffffff; font-size: 8vw; padding: 1rem ; display: flex; }
   }
@@ -56,7 +62,7 @@
   @media screen and (min-width: 768px) { 
 
     .videoFadingContainer                    { position: absolute; top: 0px; height: 30.8%; }
-    .countdown_wrapper .countdown_bottom     { width: 500px; padding : 2rem 6rem; display: flex; justify-content: center; font-weight : 400; }
+    .countdown_wrapper .countdown_bottom     { width: 100% !important; text-align: center; padding : 3rem 1rem; display: flex; justify-content: center; font-weight : 400; }
     .countdown_wrapper .countdown_tag        { text-transform: uppercase; font-size: 20px; text-align: center;}
     .card_inside_controller                  { display: flex; justify-content: space-evenly; }
     .newsCards_inside_wrapper                { display: flex; flex-direction: column; align-items: center; justify-content: space-around;    }
@@ -73,10 +79,10 @@
   @media screen and (min-width: 1024px) { 
 
     .videoFadingContainer                { height: 53%; }
-    .countdown_wrapper .countdown_bottom { width: 800px; padding : 5rem 6rem; display:  flex; justify-content: center; font-weight : 400; }
+    .countdown_wrapper .countdown_bottom { width: 100%; padding : 5rem 6rem; display:  flex; justify-content: center; font-weight : 400; }
     .countdown_wrapper .countdown_tag    { text-transform: uppercase; font-size: 30px; text-align: center;}
     .card_inside_controller              { display: flex; justify-content: space-evenly; }
-    .countdown_wrapper .countdown_time   { font-size: 11vw; padding: 1.5rem 3rem; display: flex; }
+    .countdown_wrapper .countdown_time   { font-size: 11vw; padding: 1.5rem 1rem; display: flex; }
 
     .newsCards_inside_wrapper            { display: flex; flex-direction: row;  align-items: center; justify-content: space-evenly;    }
     .cardStyles                          { width: 305px; height: 100%; text-align: center; }
@@ -111,9 +117,9 @@
 
 
   @media screen and (min-width: 1680px) { 
-   
+    .news_outer_wrapper h2 { padding-left: 9.5rem !important;}
     .videoFadingContainer { height: 65.1%; }
-    .countdown_wrapper .countdown_bottom { width: 100%; padding : 5rem 9rem; font-weight : 400; }
+    .countdown_wrapper .countdown_bottom { width: 100%; padding : 10rem 5rem; font-weight : 400; }
     .countdown_wrapper .countdown_time   { color:#ffffff; font-size: 13vw; padding: 2rem 3rem; display: flex; }
     .cardStyles                          { width: 430px !important; height: 100%;}
 

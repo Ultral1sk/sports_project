@@ -3,7 +3,7 @@
 ===============================*/
 
 @media screen and (min-width: 375px) { 
-    .featured_wrapper { background: url('../../../Resources//images/players/heat/heatBackground2.jpg'); background-size: cover; background-position: center; margin: 0 auto; width: 100%; height: 88vh; overflow: hidden;    }
+    .featured_wrapper { background: url('../../../Resources//images/players/heat/heatBackground2.jpg'); background-size: cover; background-position: center; margin: 0 auto; width: 100%; height: 100vh; overflow: hidden;    }
     .featured_heat_background {width: 100%;height: 100%;z-index: 999;background: linear-gradient(to left top, #000000f1, #000000, #000000, #25252500, #25252500, #222222, #38383800, #78777800, #6b6b6b7a, #1b1b1b3a, #2a2526, #140a0a);}
     .featured_stripes {position: relative;width: 100%; height : 100% ;display:flex; justify-content: flex-end; align-items: flex-end; }
     .featured_text {position: relative;font-family: 'Righteous', cursive;width: 100%;}

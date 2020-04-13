@@ -3,10 +3,10 @@
     .news_outer_wrapper {  background-color: white; padding-top: 3rem; h2 { padding-left: 9.2rem;}}
     .news_inner_wrapper {  display: flex; width: 100%; justify-content: center; flex-direction: column; margin-bottom : 1rem; }
     
-    .newsLeft{ width: 100%; height: 50vh;  margin: 0.5rem;  
+    .newsLeft{  height: 50vh;  margin: 0.5rem;  
         background : url('../../../Resources/images/players/heat/newsImages/butler1.jpg') center center no-repeat; background-size: cover;} 
 
-    .newsRight{ width: 100%; height: 50vh; margin: 0.5rem;  
+    .newsRight{  height: 50vh; margin: 0.5rem;  
         background : url('../../../Resources/images/players/heat/newsImages/derrick1.jpg') center center no-repeat; background-size: cover;
     }
 

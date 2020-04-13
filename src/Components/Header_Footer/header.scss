@@ -1,16 +1,16 @@
 @media screen and (min-width: 375px) { 
-  .navbar   { width: 100%;z-index: 1;display: flex;justify-content: space-between;align-items: center;height: 140px;background: #000000;
+  .navbar   { position: absolute; z-index: 999;  width: 100%;z-index: 1;display: flex;justify-content: space-between;align-items: center;height: 140px; background-color: transparent;
    
   
-    .logo a    {color: white; padding-top: 33px; display: flex; flex-direction: column; clear: both; padding-bottom: 30px; text-decoration: none; width: 98%;
+    .logo a    {color: white; padding-top: 33px; display: flex; flex-direction: column; clear: both; padding-bottom: 30px; text-decoration: none; width: 100%;
       
     
     }
     .gray      { color : white; }
-    .fa-bars   { display: none; color: white; font-size: 3rem; }
-    nav        {
-      ul       { display: flex;   justify-content: space-between; }
-      li       { margin: 0 15px; list-style: none;  justify-content: space-between; font-size: 1em; color : white !important;   text-decoration: none; }
+    .fa-bars   { display: none; color: white; font-size: 3rem; z-index: 999; text-shadow: 6px 6px 6px  rgb(0, 0, 0); }
+    nav        { 
+      ul       { display: flex;  width: 70%;  justify-content: space-around;  }
+      li       { margin: 0 15px;   list-style: none; padding: 0rem 1rem;  justify-content: space-between; font-size: 1em; color : white !important; text-shadow: 5px 2px 6px  rgb(0, 0, 0);   text-decoration: none; }
       a        { font-size: 1em;   text-decoration: underline !important;   }
    
       
@@ -18,7 +18,7 @@
   
     @media only screen and (max-width: 800px) { padding: 0px;
      
-      .logo     { width: 100%;  display: block; padding-left: 15px;   padding-top: 0px !important;}
+      .logo     { width: 100%;  display: block; padding-left: 15px;   padding-top: 0px !important; }
        li       { color : white; }
     }
     @media only screen and (max-width: 800px) { position: absolute; top : 0; height: auto; min-height: 50px; display: block;
@@ -27,8 +27,9 @@
         a       { padding: 20px 0px; }
       }
       .fa-bars  { display: inline-block; position: absolute; top: 30px; right: 20px; cursor: pointer; }
-      ul.collapsed { width: 100%; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-wrap: wrap; padding : 0; background-color: black;
-        
+      ul.collapsed { position: absolute; top: 0; width: 100%; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-wrap: wrap; padding : 0; background-color: black;
+        top: 0px;
+        margin: 0px;
         overflow: hidden; max-height: 0;
         -moz-transition-duration: 0.4s;
         -webkit-transition-duration: 0.4s;
@@ -89,7 +90,7 @@
   
   @media screen and (min-width: 1024px) {
     @media screen and (min-height: 1366px) {
-    .navbar   {  position: absolute;top : 0;width: 100%;z-index: 1;display: flex;justify-content: space-between;align-items: center;height: 140px;background: #000000;
+    .navbar   {  position: absolute;top : 0;width: 100%;z-index: 1;display: flex;justify-content: space-between;align-items: center;height: 140px;;
    
       nav        {
         color : white;

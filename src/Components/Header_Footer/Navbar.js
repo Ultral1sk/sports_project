@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import HeatLogo from '../ReusableUI/Icons'
 import heatLogo from '../../Resources/images/logos/heatThree.png'
 
 // import { BurgerIcon } from './'
-import styled from "styled-components";
-
-const Navigation = styled.header`
-`;
 
 class Nav extends Component {
   constructor(props) {
@@ -26,21 +22,21 @@ class Nav extends Component {
     const { isExpanded } = this.state;
 
     return (
-      <Navigation className="navbar">
-        <div className="logo">
+      <div className="navbar">
+    
         
 
           
             <HeatLogo
               link={true}
               linkTo={'/'}
-              width="60px"
-              height="60px"
+              width="110px"
+              height="110px"
               url={heatLogo}
             />
 
       
-        </div>
+       
         <nav className="nav">
           <div className="hamburger_icon">
 
@@ -51,8 +47,8 @@ class Nav extends Component {
             />
           </div>
           <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-          <NavLink to="/">
-              <li >home</li>
+          <NavLink to="/" >
+              <li >Home</li>
             </NavLink>
             <NavLink to="team_news">
               <li >News</li>
@@ -72,7 +68,7 @@ class Nav extends Component {
            
           </ul>
         </nav>
-      </Navigation>
+      </div>
     );
   }
 }
